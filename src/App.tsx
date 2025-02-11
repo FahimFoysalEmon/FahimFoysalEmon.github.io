@@ -84,7 +84,7 @@ function App() {
             className="w-48 h-48 rounded-lg object-cover"
           />
           <div>
-            <h1 className="text-3xl font-bold mb-2">Fahim Foysal Emon</h1>
+            <h1 className="text-3xl font-bold mb-2">Fahim Foysal Emon Github Check</h1>
             <p className="text-gray-400 mb-1">
               Software Engineer & Travel Enthusiast
             </p>
