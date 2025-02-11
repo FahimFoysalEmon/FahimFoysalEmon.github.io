@@ -311,8 +311,8 @@ function App() {
           </div>
         </div>
 
-        <div id="contact" className="grid grid-cols-12 gap-10 items-center">
-          <div className="col-span-4 space-y-4 text-gray-100">
+        <div id="contact" className="grid grid-cols-12 gap-10 items-center mb-10">
+          <div className="lg:col-span-4 col-span-12 space-y-4 text-gray-100">
             <div className="flex items-center gap-5">
               <Phone size={24} />
               <div className="flex flex-col items-start gap-1">
@@ -338,7 +338,7 @@ function App() {
             </div>
           </div>
 
-          <div className="col-span-8">
+          <div className="lg:col-span-8 col-span-12">
             <h2 className="text-xl font-semibold mb-4 text-gray-100">
               Get in Touch
             </h2>
@@ -354,7 +354,7 @@ function App() {
                   type="text"
                   id="name"
                   required
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-gray-100"
+                  className="w-auto lg:w-full px-2 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-gray-100"
                   value={emailForm.name}
                   onChange={(e) =>
                     setEmailForm({ ...emailForm, name: e.target.value })
@@ -372,7 +372,7 @@ function App() {
                   type="email"
                   id="email"
                   required
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-gray-100"
+                  className="w-auto lg:w-full px-2 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-gray-100"
                   value={emailForm.email}
                   onChange={(e) =>
                     setEmailForm({ ...emailForm, email: e.target.value })
@@ -390,7 +390,7 @@ function App() {
                   id="message"
                   required
                   rows={4}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-gray-100"
+                  className="w-auto lg:w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-gray-100"
                   value={emailForm.message}
                   onChange={(e) =>
                     setEmailForm({ ...emailForm, message: e.target.value })
@@ -399,7 +399,7 @@ function App() {
               </div>
               <button
                 type="submit"
-                className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium flex items-center justify-center gap-2 transition-colors"
+                className="w-auto lg:w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium flex items-center justify-center gap-2 transition-colors"
               >
                 Send Message <Send size={16} />
               </button>
@@ -407,7 +407,7 @@ function App() {
           </div>
         </div>
 
-        
+
       </div>
     </div>
   );
