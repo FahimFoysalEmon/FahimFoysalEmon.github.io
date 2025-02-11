@@ -333,7 +333,7 @@ function App() {
               <MapPin size={24} />
               <div className="flex flex-col items-start gap-1">
                 <p className="text-[20px]">Address</p>
-                <p className="text-blue-500">Mirpur DOHS</p>
+                <p className="text-blue-500">Mirpur DOHS, Dhaka, Bangladesh</p>
               </div>
             </div>
           </div>
