@@ -39,13 +39,13 @@ function App() {
       tags: ["Spring Security", "OAuth", "REST APIs"],
     },
     {
-      title: "IQDX",
+      title: "Cryptocurrency Based Trading Platform",
       description:
         "Cryptocurrency trading platform with OKX integration, implementing sell/buy operations and admin panel.",
       tags: ["Crypto", "Microservices", "Spring Boot"],
     },
     {
-      title: "FIB Booking",
+      title: "Booking Services",
       description:
         "Hotel booking system with integrated payment gateway for seamless reservations.",
       tags: ["Payment Gateway", "Booking System", "Spring Boot"],
@@ -54,13 +54,13 @@ function App() {
 
   const additionalProjects = [
     {
-      title: "Dizli",
+      title: "E-commerce Based Platform, Sells Amazon, Ebay and iHub Products",
       description:
         "E-commerce platform enabling direct orders from Amazon, eBay, and iHub. Implemented complete authentication system.",
       tags: ["Authentication", "E-commerce", "Integration"],
     },
     {
-      title: "GlobPay",
+      title: "Global Payable Platform",
       description:
         "International payment platform facilitating transactions from Canada to Bangladesh.",
       tags: ["Payment Processing", "International Transfer", "Spring Boot"],
@@ -92,7 +92,7 @@ function App() {
               fahim.foysal.emon@gmail.com
             </p>
             <p className="text-gray-300 mb-4 leading-7">
-              A detail-oriented software engineer with 4 years of experience in
+              A detail-oriented software engineer with nearly 4 years of experience in
               Java and Spring Boot. Specialized in creating enterprise solutions
               and REST APIs in both Microservices and Monolithic architectures.
             </p>
