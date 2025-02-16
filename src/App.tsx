@@ -88,13 +88,24 @@ function App() {
             <p className="text-gray-400 mb-1">
               Software Engineer & Travel Enthusiast
             </p>
-            <p className="text-blue-500 mb-1">
-              fahim.foysal.emon@gmail.com
+            <p className="text-gray-400 mb-1">
+              Currently working as a Backend (Java) Software Engineer at{" "}
+              <a
+                href="https://www.newroztech.com/"
+                className="text-blue-500 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Newroz Technologies Ltd.
+              </a>
             </p>
+
+            <p className="text-blue-500 mb-1">fahim.foysal.emon@gmail.com</p>
             <p className="text-gray-300 mb-4 leading-7">
-              A detail-oriented software engineer with nearly 4 years of experience in
-              Java and Spring Boot. Specialized in creating enterprise solutions
-              and REST APIs in both Microservices and Monolithic architectures.
+              A detail-oriented software engineer with nearly 4 years of
+              experience in Java and Spring Boot. Specialized in creating
+              enterprise solutions and REST APIs in both Microservices and
+              Monolithic architectures.
             </p>
             <div className="flex gap-4">
               <a
@@ -311,7 +322,10 @@ function App() {
           </div>
         </div>
 
-        <div id="contact" className="grid grid-cols-12 gap-10 items-center mb-10">
+        <div
+          id="contact"
+          className="grid grid-cols-12 gap-10 items-center mb-10"
+        >
           <div className="lg:col-span-4 col-span-12 space-y-4 text-gray-100">
             <div className="flex items-center gap-5">
               <Phone size={24} />
@@ -406,8 +420,6 @@ function App() {
             </form>
           </div>
         </div>
-
-
       </div>
     </div>
   );
