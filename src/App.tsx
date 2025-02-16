@@ -100,7 +100,12 @@ function App() {
               </a>
             </p>
 
-            <p className="text-blue-500 mb-1">fahim.foysal.emon@gmail.com</p>
+            <div>
+              <p className="inline-block text-gray-400">Drop email to -{"> "}</p>
+              <p className="inline-block text-blue-500 ml-2">
+                fahim.foysal.emon@gmail.com
+              </p>
+            </div>
             <p className="text-gray-300 mb-4 leading-7">
               A detail-oriented software engineer with nearly 4 years of
               experience in Java and Spring Boot. Specialized in creating
@@ -162,6 +167,10 @@ function App() {
                 <Code2 size={16} className="text-blue-500" />
                 <span>REST APIs</span>
               </p>
+              <p className="flex items-center gap-2">
+                <Code2 size={16} className="text-blue-500" />
+                <span>Postgres SQL</span>
+              </p>
             </div>
             <div className="space-y-2">
               <p className="flex items-center gap-2">
@@ -175,6 +184,10 @@ function App() {
               <p className="flex items-center gap-2">
                 <Code2 size={16} className="text-blue-500" />
                 <span>React & Thymeleaf</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Code2 size={16} className="text-blue-500" />
+                <span>Mongo DB</span>
               </p>
             </div>
           </div>
