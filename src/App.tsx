@@ -107,7 +107,7 @@ function App() {
               </p>
             </div>
             <p className="text-gray-300 mb-4 leading-7">
-              A detail-oriented software engineer with nearly 4 years of
+              A detail-oriented software engineer with 4+ years of
               experience in Java and Spring Boot. Specialized in creating
               enterprise solutions and REST APIs in both Microservices and
               Monolithic architectures.
