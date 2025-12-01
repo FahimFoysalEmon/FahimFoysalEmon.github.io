@@ -630,20 +630,20 @@ export default function App(): JSX.Element {
       tags: ["Security", "Compliance", "OAuth2"],
     },
     {
-      title: "Crypto Trading Integration",
+      title: "Hotel and Flight Booking & Payment Gateway",
       description:
-        "Integrated exchange (OKX) to enable buy/sell flows and ledger updates with eventual consistency across services.",
-      highlights: ["Exchange integration", "Microservices architecture", "Resilient order processing"],
-      tags: ["Crypto", "Microservices", "Resilience"],
+        "Calling third party API like TourVisio for Hotel and Flight booking service and payment gateway including it.",
+      tags: ["Payments", "Retries", "Hotel Booking"],
     },
   ];
 
   const additionalProjects = [
     {
-      title: "Booking & Payment Gateway",
+      title: "Crypto Trading Integration",
       description:
-        "End-to-end booking service integrated with payment gateways and retries/failure handling for payments.",
-      tags: ["Payments", "Retries", "Spring"],
+        "Integrated exchange (OKX) to enable buy/sell flows and ledger updates with eventual consistency across services.",
+      highlights: ["Exchange integration", "Microservices architecture", "Resilient order processing"],
+      tags: ["Crypto", "Microservices", "Resilience"],
     },
     {
       title: "E-commerce Integrations",
@@ -683,7 +683,7 @@ export default function App(): JSX.Element {
 
                 <p className="mt-2 text-sm text-gray-400 leading-6 max-w-xl">
                   I design and build secure, compliant financial systems: transaction
-                  engines, IPN reconciliations, OAuth2-based auth & agent platforms.
+                  engines, IPN reconciliations, OAuth2-based auth & agent platforms. Have deep understanding in both Mobile Wallet and Banking transactional engine, about how it works.
                   4+ years of production experience delivering high-throughput
                   services for fintech products. Open to remote senior backend roles.
                 </p>
@@ -745,30 +745,34 @@ export default function App(): JSX.Element {
                 role-based access in financial flows.
               </p>
               <ul className="mt-3 text-sm text-gray-300 list-disc ml-5 space-y-1">
-                <li>IPN handlers with idempotency and integrity checks</li>
-                <li>Encrypted audit trails for sensitive operations</li>
+                <li>IPN handlers for payment validation.</li>
+                <li>Add Money, Send Money flow, how it works under the hood.</li>
               </ul>
             </div>
 
             <div className="p-4 rounded-lg bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800">
               <h3 className="text-lg font-semibold">Transaction Reliability</h3>
               <p className="text-gray-400 mt-2 text-sm">
-                Consistent ledger updates and reconciliation strategies to ensure
-                safe settlements across agents and users.
+                Transaction engine, how a transaction engine works in the system.
               </p>
               <ul className="mt-3 text-sm text-gray-300 list-disc ml-5 space-y-1">
-                <li>Atomic operations with fallback compensating transactions</li>
-                <li>Retry & dead-letter handling for async flows</li>
+                <li>Validates request, reserves balance, and processes atomic updates</li>
+                <li>Calculates commissions and finalizes ledger entries with guaranteed consistency</li>
               </ul>
             </div>
 
             <div className="p-4 rounded-lg bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800">
-              <h3 className="text-lg font-semibold">Compliance & KYC</h3>
+              <h3 className="text-lg font-semibold">Sales Analytics & Performance</h3>
               <p className="text-gray-400 mt-2 text-sm">
-                E-KYB workflows with document verification and approvals to
-                support regulatory requirements.
+                Automated reporting and performance tracking that drives agent incentives
+                and business insights.
               </p>
+              <ul className="mt-3 text-sm text-gray-300 list-disc ml-5 space-y-1">
+                <li>Daily & monthly total sales aggregation for agents</li>
+                <li>Dynamic account level upgrades based on monthly performance</li>
+              </ul>
             </div>
+
           </div>
         </section>
 
@@ -783,7 +787,7 @@ export default function App(): JSX.Element {
               </p>
               <p className="flex items-center gap-2">
                 <Code2 size={16} className="text-blue-500" />
-                <span>Payments / IPN / Reconciliation</span>
+                <span>Payments / IPN</span>
               </p>
               <p className="flex items-center gap-2">
                 <Code2 size={16} className="text-blue-500" />
@@ -802,15 +806,15 @@ export default function App(): JSX.Element {
               </p>
               <p className="flex items-center gap-2">
                 <Code2 size={16} className="text-blue-500" />
-                <span>CI/CD, Docker, Kubernetes basics</span>
+                <span>CI/CD, Docker basics</span>
               </p>
               <p className="flex items-center gap-2">
                 <Code2 size={16} className="text-blue-500" />
-                <span>React (frontend for dashboards)</span>
+                <span>React (basic frontend)</span>
               </p>
               <p className="flex items-center gap-2">
                 <Code2 size={16} className="text-blue-500" />
-                <span>Monitoring: Prometheus / Grafana basics</span>
+                <span>Scalable API Design & Backend Architecture</span>
               </p>
             </div>
           </div>
