@@ -198,14 +198,14 @@ export default function App(): JSX.Element {
             </div>
 
             <div className="p-4 rounded-lg bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800">
-              <h3 className="text-lg font-semibold">Transaction Reliability</h3>
+              <h3 className="text-lg font-semibold">Purchase Flow, Commission & Cashback</h3>
               <p className="text-gray-400 mt-2 text-sm">
-                Transaction engine, how a transaction engine works in the system.
-                
+                End-to-end purchase flow: validation, balance reservation, atomic updates, commission calculation, and instant cashback application.
               </p>
               <ul className="mt-3 text-sm text-gray-300 list-disc ml-5 space-y-1">
-                <li>Validates request, reserves balance, and processes atomic updates</li>
-                <li>Calculates commissions and finalizes ledger entries with guaranteed consistency</li>
+                <li>Purchase flow orchestration (validate → reserve → settle)</li>
+                <li>Commission engine and instant cashback; role-based settlement</li>
+                <li>Ledger consistency and audit trails</li>
               </ul>
             </div>
 
