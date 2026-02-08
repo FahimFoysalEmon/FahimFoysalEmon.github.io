@@ -472,7 +472,7 @@ export default function App(): JSX.Element {
           <h2 className="text-xl font-semibold mb-4 text-gray-100">Extracurricular</h2>
           <div className="rounded-lg border border-gray-800 bg-gray-900/50 p-4 text-gray-300">
             <p className="text-sm leading-6">
-              Along with my team, I’ve organised and run multiple tours for the company in both{' '}
+              Along with my team, I’ve organised and run multiple tours inside the company in both{' '}
               <span className="text-gray-200">India</span> and{' '}
               <span className="text-gray-200">Bangladesh</span> — helping the squad unwind, bond, and explore together.
             </p>

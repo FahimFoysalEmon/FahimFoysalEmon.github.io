@@ -8,47 +8,45 @@ import {
   Link,
 } from "@react-pdf/renderer";
 
+// Match website theme: #071021 bg, blue accent, gray text
 const colors = {
+  bg: "#071021",
+  surface: "#0f172a",
+  card: "#1e293b",
+  border: "#334155",
+  text: "#f1f5f9",
+  textMuted: "#94a3b8",
   accent: "#2563eb",
-  accentDark: "#1d4ed8",
+  accentLight: "#60a5fa",
   emerald: "#059669",
-  slate: "#334155",
-  slateLight: "#64748b",
-  slateDark: "#0f172a",
-  bgLight: "#f8fafc",
-  border: "#e2e8f0",
 };
 
 const styles = StyleSheet.create({
   page: {
-    backgroundColor: "#ffffff",
+    backgroundColor: colors.bg,
     fontFamily: "Helvetica",
     fontSize: 10,
+    paddingHorizontal: 32,
+    paddingTop: 36,
+    paddingBottom: 32,
   },
-  // Top accent band
   topBand: {
-    height: 6,
+    height: 4,
     backgroundColor: colors.accent,
-    marginBottom: 0,
-  },
-  content: {
-    padding: 32,
-    paddingTop: 24,
-  },
-  // Header
-  header: {
     marginBottom: 20,
   },
+  header: {
+    marginBottom: 18,
+  },
   name: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: "bold",
-    color: colors.slateDark,
+    color: colors.text,
     marginBottom: 4,
-    letterSpacing: 0.5,
   },
   title: {
-    fontSize: 13,
-    color: colors.slateLight,
+    fontSize: 12,
+    color: colors.textMuted,
     marginBottom: 6,
   },
   badge: {
@@ -57,117 +55,100 @@ const styles = StyleSheet.create({
     color: "#fff",
     paddingHorizontal: 10,
     paddingVertical: 4,
-    borderRadius: 4,
-    marginBottom: 14,
+    borderRadius: 3,
+    marginBottom: 12,
   },
   badgeText: {
     fontSize: 9,
     fontWeight: "bold",
   },
-  contactGrid: {
+  contactRow: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 4,
-    rowGap: 6,
-  },
-  contactItem: {
-    flexDirection: "row",
-    alignItems: "center",
-    width: "50%",
+    gap: 8,
   },
   contactLink: {
-    color: colors.accent,
+    color: colors.accentLight,
     textDecoration: "none",
     fontSize: 9,
   },
   contactText: {
+    color: colors.textMuted,
     fontSize: 9,
-    color: colors.slateLight,
   },
-  contactLabel: {
-    fontSize: 8,
-    color: colors.slateLight,
-    marginRight: 4,
-    opacity: 0.9,
+  contactDot: {
+    fontSize: 9,
+    color: colors.border,
   },
-  // Section
   section: {
-    marginBottom: 16,
+    marginBottom: 14,
   },
   sectionTitle: {
     fontSize: 11,
     fontWeight: "bold",
-    color: colors.slateDark,
-    marginBottom: 10,
-    paddingBottom: 6,
-    borderBottomWidth: 2,
-    borderBottomColor: colors.accent,
+    color: colors.text,
+    marginBottom: 8,
+    paddingBottom: 5,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
     textTransform: "uppercase",
-    letterSpacing: 0.8,
+    letterSpacing: 0.5,
   },
   summary: {
     fontSize: 10,
-    color: colors.slateLight,
+    color: colors.textMuted,
     lineHeight: 1.55,
-  },
-  // Experience
-  expRow: {
-    marginBottom: 14,
   },
   expHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "baseline",
     marginBottom: 4,
   },
   expTitle: {
     fontSize: 11,
     fontWeight: "bold",
-    color: colors.slateDark,
+    color: colors.text,
   },
   expDate: {
     fontSize: 9,
-    color: colors.slateLight,
+    color: colors.textMuted,
   },
   expCompany: {
     fontSize: 10,
-    color: colors.accent,
+    color: colors.accentLight,
     marginBottom: 6,
   },
   expDesc: {
     fontSize: 9,
-    color: colors.slateLight,
-    lineHeight: 1.45,
+    color: colors.textMuted,
+    lineHeight: 1.5,
   },
-  // Highlights
-  highlightGrid: {
+  highlightRow: {
     flexDirection: "row",
     flexWrap: "wrap",
     gap: 8,
   },
   highlightCard: {
     width: "48%",
-    backgroundColor: colors.bgLight,
+    backgroundColor: colors.card,
     borderWidth: 1,
     borderColor: colors.border,
-    borderLeftWidth: 4,
+    borderLeftWidth: 3,
     borderLeftColor: colors.accent,
     padding: 10,
-    marginBottom: 8,
   },
   highlightTitle: {
     fontSize: 10,
     fontWeight: "bold",
-    color: colors.slateDark,
+    color: colors.text,
     marginBottom: 4,
   },
   highlightText: {
     fontSize: 8,
-    color: colors.slateLight,
-    lineHeight: 1.4,
+    color: colors.textMuted,
+    lineHeight: 1.45,
   },
-  // Skills
-  skillsGrid: {
+  skillsRow: {
     flexDirection: "row",
     gap: 24,
   },
@@ -176,85 +157,83 @@ const styles = StyleSheet.create({
   },
   skillItem: {
     fontSize: 9,
-    color: colors.slateLight,
-    marginBottom: 5,
+    color: colors.textMuted,
+    marginBottom: 4,
   },
-  // Tools
   toolsRow: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 6,
+    gap: 4,
   },
   toolTag: {
     fontSize: 8,
-    backgroundColor: colors.bgLight,
-    color: colors.slateDark,
+    backgroundColor: colors.card,
+    color: colors.textMuted,
     paddingHorizontal: 8,
     paddingVertical: 4,
-    borderRadius: 4,
+    borderRadius: 3,
     borderWidth: 1,
     borderColor: colors.border,
   },
-  // Projects
   projectCard: {
-    marginBottom: 14,
-    paddingBottom: 12,
+    marginBottom: 10,
+    paddingBottom: 8,
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
   },
   projectTitle: {
-    fontSize: 10,
+    fontSize: 9,
     fontWeight: "bold",
-    color: colors.slateDark,
-    marginBottom: 4,
+    color: colors.text,
+    marginBottom: 3,
   },
   projectDesc: {
-    fontSize: 9,
-    color: colors.slateLight,
-    lineHeight: 1.45,
-    marginBottom: 8,
+    fontSize: 8,
+    color: colors.textMuted,
+    lineHeight: 1.4,
+    marginBottom: 6,
   },
   projectTags: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 6,
+    gap: 4,
   },
   projectTag: {
-    fontSize: 7,
-    backgroundColor: colors.bgLight,
-    color: colors.slateLight,
-    paddingHorizontal: 6,
+    fontSize: 6,
+    backgroundColor: colors.card,
+    color: colors.textMuted,
+    paddingHorizontal: 5,
     paddingVertical: 2,
-    borderRadius: 3,
+    borderRadius: 2,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
-  // Writing
   writingItem: {
-    marginBottom: 8,
+    marginBottom: 6,
   },
   writingTitle: {
-    fontSize: 9,
+    fontSize: 8,
     fontWeight: "bold",
-    color: colors.slateDark,
+    color: colors.text,
   },
   writingLink: {
-    fontSize: 8,
-    color: colors.accent,
+    fontSize: 7,
+    color: colors.accentLight,
     textDecoration: "none",
   },
-  // Footer
   footer: {
-    marginTop: 20,
-    paddingTop: 12,
+    marginTop: 12,
+    paddingTop: 8,
     borderTopWidth: 1,
     borderTopColor: colors.border,
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    gap: 8,
+    gap: 6,
   },
   footerText: {
-    fontSize: 8,
-    color: colors.slateLight,
+    fontSize: 7,
+    color: colors.textMuted,
   },
 });
 
@@ -262,264 +241,237 @@ const WEBSITE_URL = "https://fahimfoysalemon.github.io";
 
 const ResumeDocument: React.FC = () => (
   <Document>
+    {/* Page 1 - Header, Summary, Experience, Highlights, Skills - keep compact to avoid overflow */}
     <Page size="A4" style={styles.page}>
-      {/* Accent band */}
       <View style={styles.topBand} />
-
-      <View style={styles.content}>
-        {/* Header */}
-        <View style={styles.header}>
-          <Text style={styles.name}>Fahim Foysal Emon</Text>
-          <Text style={styles.title}>Backend Software Engineer — Fintech & Payments</Text>
-          <View style={styles.badge}>
-            <Text style={styles.badgeText}>Open to remote roles</Text>
-          </View>
-          <View style={styles.contactGrid}>
-            <View style={styles.contactItem}>
-              <Text style={styles.contactLabel}>Email</Text>
-              <Text style={styles.contactText}>fahim.foysal.emon@gmail.com</Text>
-            </View>
-            <View style={styles.contactItem}>
-              <Text style={styles.contactLabel}>Phone</Text>
-              <Text style={styles.contactText}>+880 1683 149665</Text>
-            </View>
-            <View style={styles.contactItem}>
-              <Text style={styles.contactLabel}>Location</Text>
-              <Text style={styles.contactText}>Mirpur DOHS, Dhaka, Bangladesh</Text>
-            </View>
-            <View style={styles.contactItem}>
-              <Text style={styles.contactLabel}>Portfolio</Text>
-              <Link src={WEBSITE_URL} style={styles.contactLink}>
-                fahimfoysalemon.github.io
-              </Link>
-            </View>
-            <View style={styles.contactItem}>
-              <Text style={styles.contactLabel}>LinkedIn</Text>
-              <Link src="https://linkedin.com/in/emowzz" style={styles.contactLink}>
-                linkedin.com/in/emowzz
-              </Link>
-            </View>
-            <View style={styles.contactItem}>
-              <Text style={styles.contactLabel}>GitHub</Text>
-              <Link src="https://github.com/FahimFoysalEmon" style={styles.contactLink}>
-                github.com/FahimFoysalEmon
-              </Link>
-            </View>
-          </View>
+      <View style={styles.header}>
+        <Text style={styles.name}>Fahim Foysal Emon</Text>
+        <Text style={styles.title}>Backend Software Engineer — Fintech & Payments</Text>
+        <View style={styles.badge}>
+          <Text style={styles.badgeText}>Open to remote roles</Text>
         </View>
-
-        {/* Summary */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Summary</Text>
-          <Text style={styles.summary}>
-            I design and build secure, compliant financial systems: transaction engines, banking add money,
-            purchase flows, commission & instant cashback, statement generation, and debit/credit ledgers.
-            Deep experience with mobile wallet & banking backends, IPN reconciliation, and 3rd‑party API
-            integration. 4.5+ years in production fintech. I mentor and supervise junior developers.
-            Currently at Newroz Technologies Ltd. Open to remote senior backend roles.
-          </Text>
+        <View style={styles.contactRow}>
+          <Link src="mailto:fahim.foysal.emon@gmail.com" style={styles.contactLink}>
+            fahim.foysal.emon@gmail.com
+          </Link>
+          <Text style={styles.contactDot}>•</Text>
+          <Text style={styles.contactText}>+880 1683 149665</Text>
+          <Text style={styles.contactDot}>•</Text>
+          <Text style={styles.contactText}>Mirpur DOHS, Dhaka</Text>
+          <Text style={styles.contactDot}>•</Text>
+          <Link src={WEBSITE_URL} style={styles.contactLink}>
+            fahimfoysalemon.github.io
+          </Link>
+          <Text style={styles.contactDot}>•</Text>
+          <Link src="https://linkedin.com/in/emowzz" style={styles.contactLink}>
+            linkedin.com/in/emowzz
+          </Link>
+          <Text style={styles.contactDot}>•</Text>
+          <Link src="https://github.com/FahimFoysalEmon" style={styles.contactLink}>
+            github.com/FahimFoysalEmon
+          </Link>
         </View>
+      </View>
 
-        {/* Experience */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Experience</Text>
-          <View style={styles.expRow}>
-            <View style={styles.expHeader}>
-              <Text style={styles.expTitle}>Backend Software Engineer</Text>
-              <Text style={styles.expDate}>Present</Text>
-            </View>
-            <Link src="https://www.newroztech.com/" style={styles.expCompany}>
-              Newroz Technologies Ltd.
-            </Link>
-            <Text style={styles.expDesc}>
-              Building fintech systems: transaction engines, purchase flows with commission & cashback,
-              IPN-based reconciliation, agent platforms. Mentor junior developers. Tech: Java, Spring Boot,
-              Postgres, microservices, OAuth2/Keycloak.
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Summary</Text>
+        <Text style={styles.summary}>
+          I design and build secure, compliant financial systems: transaction engines, banking add money,
+          purchase flows, commission & instant cashback, statement generation, and debit/credit ledgers.
+          Deep experience with mobile wallet & banking backends, IPN reconciliation, and 3rd‑party API
+          integration. 4.5+ years in production fintech. I mentor and supervise junior developers.
+          Currently at Newroz Technologies Ltd. Open to remote senior backend roles.
+        </Text>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Experience</Text>
+        <View style={styles.expHeader}>
+          <Text style={styles.expTitle}>Backend Software Engineer</Text>
+          <Text style={styles.expDate}>Present</Text>
+        </View>
+        <Link src="https://www.newroztech.com/" style={styles.expCompany}>
+          Newroz Technologies Ltd.
+        </Link>
+        <Text style={styles.expDesc}>
+          Building fintech systems: transaction engines, purchase flows with commission & cashback,
+          IPN-based reconciliation, agent platforms. Mentor junior developers. Java, Spring Boot,
+          Postgres, microservices, OAuth2/Keycloak.
+        </Text>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Fintech Highlights</Text>
+        <View style={styles.highlightRow}>
+          <View style={styles.highlightCard}>
+            <Text style={styles.highlightTitle}>Secure Payments</Text>
+            <Text style={styles.highlightText}>
+              OAuth2 & Keycloak, IPN handlers, Add Money / Send Money flows.
+            </Text>
+          </View>
+          <View style={styles.highlightCard}>
+            <Text style={styles.highlightTitle}>Purchase Flow, Commission & Cashback</Text>
+            <Text style={styles.highlightText}>
+              End-to-end purchase flow, commission engine, instant cashback, role-based settlement.
+            </Text>
+          </View>
+          <View style={styles.highlightCard}>
+            <Text style={styles.highlightTitle}>Statements & Ledgers</Text>
+            <Text style={styles.highlightText}>
+              Debit/credit ledgers, statement generation, audit trails.
+            </Text>
+          </View>
+          <View style={styles.highlightCard}>
+            <Text style={styles.highlightTitle}>3rd‑Party APIs</Text>
+            <Text style={styles.highlightText}>
+              Bank, gateway, exchange integrations; idempotent callbacks, retries, reconciliation.
             </Text>
           </View>
         </View>
+      </View>
 
-        {/* Fintech Highlights */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Fintech Highlights</Text>
-          <View style={styles.highlightGrid}>
-            <View style={styles.highlightCard}>
-              <Text style={styles.highlightTitle}>Secure Payments</Text>
-              <Text style={styles.highlightText}>
-                OAuth2 & Keycloak, IPN handlers, Add Money / Send Money flows.
-              </Text>
-            </View>
-            <View style={styles.highlightCard}>
-              <Text style={styles.highlightTitle}>Purchase Flow, Commission & Cashback</Text>
-              <Text style={styles.highlightText}>
-                End-to-end purchase flow, commission engine, instant cashback, role-based settlement.
-              </Text>
-            </View>
-            <View style={styles.highlightCard}>
-              <Text style={styles.highlightTitle}>Statements & Ledgers</Text>
-              <Text style={styles.highlightText}>
-                Debit/credit ledgers, statement generation, audit trails.
-              </Text>
-            </View>
-            <View style={styles.highlightCard}>
-              <Text style={styles.highlightTitle}>3rd‑Party APIs</Text>
-              <Text style={styles.highlightText}>
-                Bank, gateway, exchange integrations; idempotent callbacks, retries, reconciliation.
-              </Text>
-            </View>
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Technical Skills</Text>
+        <View style={styles.skillsRow}>
+          <View style={styles.skillsCol}>
+            <Text style={styles.skillItem}>• Java & Spring Boot (Fintech systems)</Text>
+            <Text style={styles.skillItem}>• Payments / IPN / Transaction Engine</Text>
+            <Text style={styles.skillItem}>• Security: OAuth2, Keycloak, JWT</Text>
+            <Text style={styles.skillItem}>• Microservice / Monolith Architecture</Text>
+          </View>
+          <View style={styles.skillsCol}>
+            <Text style={styles.skillItem}>• Datastores: Postgres, Mongo</Text>
+            <Text style={styles.skillItem}>• CI/CD, Docker</Text>
+            <Text style={styles.skillItem}>• React (basic frontend)</Text>
+            <Text style={styles.skillItem}>• 3rd‑party API integration</Text>
           </View>
         </View>
+      </View>
 
-        {/* Technical Skills */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Technical Skills</Text>
-          <View style={styles.skillsGrid}>
-            <View style={styles.skillsCol}>
-              <Text style={styles.skillItem}>• Java & Spring Boot (Fintech systems)</Text>
-              <Text style={styles.skillItem}>• Payments / IPN / Transaction Engine</Text>
-              <Text style={styles.skillItem}>• Security: OAuth2, Keycloak, JWT</Text>
-              <Text style={styles.skillItem}>• Microservice / Monolith Architecture</Text>
-            </View>
-            <View style={styles.skillsCol}>
-              <Text style={styles.skillItem}>• Datastores: Postgres, Mongo</Text>
-              <Text style={styles.skillItem}>• CI/CD, Docker</Text>
-              <Text style={styles.skillItem}>• React (basic frontend)</Text>
-              <Text style={styles.skillItem}>• 3rd‑party API integration</Text>
-            </View>
-          </View>
-        </View>
-
-        {/* Tools */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Tools</Text>
-          <View style={styles.toolsRow}>
-            <Text style={styles.toolTag}>LogHub</Text>
-            <Text style={styles.toolTag}>CloudWatch</Text>
-            <Text style={styles.toolTag}>GitHub</Text>
-            <Text style={styles.toolTag}>Postman</Text>
-            <Text style={styles.toolTag}>AWS</Text>
-            <Text style={styles.toolTag}>Jira</Text>
-            <Text style={styles.toolTag}>Cursor AI</Text>
-            <Text style={styles.toolTag}>Jenkins</Text>
-            <Text style={styles.toolTag}>Docker</Text>
-          </View>
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Tools</Text>
+        <View style={styles.toolsRow}>
+          <Text style={styles.toolTag}>LogHub</Text>
+          <Text style={styles.toolTag}>CloudWatch</Text>
+          <Text style={styles.toolTag}>GitHub</Text>
+          <Text style={styles.toolTag}>Postman</Text>
+          <Text style={styles.toolTag}>AWS</Text>
+          <Text style={styles.toolTag}>Jira</Text>
+          <Text style={styles.toolTag}>Cursor AI</Text>
+          <Text style={styles.toolTag}>Jenkins</Text>
+          <Text style={styles.toolTag}>Docker</Text>
         </View>
       </View>
     </Page>
 
-    {/* Page 2 - Projects */}
+    {/* Page 2 - Projects, Writing, Extracurricular */}
     <Page size="A4" style={styles.page}>
       <View style={styles.topBand} />
-      <View style={styles.content}>
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Featured Projects</Text>
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Featured Projects</Text>
 
-          <View style={styles.projectCard}>
-            <Text style={styles.projectTitle}>Card Selling & Wallet — Fintech Transaction Engine</Text>
-            <Text style={styles.projectDesc}>
-              Secure agent-based card selling and wallet: onboarding, top-ups, IPN-based bank reconciliation,
-              purchase flows, agent settlement. Idempotent IPN handler, commission engine, instant cashback,
-              statement generation (debit/credit).
-            </Text>
-            <View style={styles.projectTags}>
-              <Text style={styles.projectTag}>Transaction Engine</Text>
-              <Text style={styles.projectTag}>Commission</Text>
-              <Text style={styles.projectTag}>Cashback</Text>
-              <Text style={styles.projectTag}>IPN</Text>
-              <Text style={styles.projectTag}>Spring Boot</Text>
-            </View>
-          </View>
-
-          <View style={styles.projectCard}>
-            <Text style={styles.projectTitle}>EKYB (Electronic Know Your Business)</Text>
-            <Text style={styles.projectDesc}>
-              Business documentation & KYC with OAuth2 + Keycloak, document validation, audit trails for regulators.
-            </Text>
-            <View style={styles.projectTags}>
-              <Text style={styles.projectTag}>Security</Text>
-              <Text style={styles.projectTag}>Compliance</Text>
-              <Text style={styles.projectTag}>OAuth2</Text>
-              <Text style={styles.projectTag}>KYC</Text>
-            </View>
-          </View>
-
-          <View style={styles.projectCard}>
-            <Text style={styles.projectTitle}>Hotel & Flight Booking — TourVisio & Payment Gateway</Text>
-            <Text style={styles.projectDesc}>
-              3rd‑party TourVisio API for hotel/flight booking in banking app; payment gateway and IPN reconciliation.
-            </Text>
-            <View style={styles.projectTags}>
-              <Text style={styles.projectTag}>3rd‑Party API</Text>
-              <Text style={styles.projectTag}>Payment Gateway</Text>
-              <Text style={styles.projectTag}>IPN</Text>
-            </View>
-          </View>
-
-          <View style={styles.projectCard}>
-            <Text style={styles.projectTitle}>Crypto Trading Integration (OKX)</Text>
-            <Text style={styles.projectDesc}>
-              3rd‑party exchange integration, ledger updates, microservices, settlement & audit logging.
-            </Text>
-            <View style={styles.projectTags}>
-              <Text style={styles.projectTag}>3rd‑Party API</Text>
-              <Text style={styles.projectTag}>Crypto</Text>
-              <Text style={styles.projectTag}>Microservices</Text>
-            </View>
-          </View>
-
-          <View style={styles.projectCard}>
-            <Text style={styles.projectTitle}>Global Payable Platform</Text>
-            <Text style={styles.projectDesc}>
-              Cross-border payments, FX, KYC between Canada and Bangladesh; 3rd‑party remittance providers.
-            </Text>
-            <View style={styles.projectTags}>
-              <Text style={styles.projectTag}>Cross-border</Text>
-              <Text style={styles.projectTag}>Payments</Text>
-              <Text style={styles.projectTag}>KYC</Text>
-            </View>
-          </View>
-        </View>
-
-        {/* Technical Writing */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Technical Writing</Text>
-          <View style={styles.writingItem}>
-            <Text style={styles.writingTitle}>Understanding OAuth 2.0</Text>
-            <Link src="https://medium.com/@fahim.foysal.emon/simplest-way-to-understand-oauth-2-0-be4e797ab9a" style={styles.writingLink}>
-              medium.com/@fahim.foysal.emon
-            </Link>
-          </View>
-          <View style={styles.writingItem}>
-            <Text style={styles.writingTitle}>Builder Pattern in Java</Text>
-            <Link src="https://medium.com/@fahim.foysal.emon/builder-pattern-in-java-b15a5352f63c" style={styles.writingLink}>
-              medium.com/@fahim.foysal.emon
-            </Link>
-          </View>
-        </View>
-
-        {/* Extracurricular */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Extracurricular</Text>
-          <Text style={styles.summary}>
-            Organised multiple company tours with my team in both India and Bangladesh — helping the squad
-            unwind, bond, and explore together.
+        <View style={styles.projectCard}>
+          <Text style={styles.projectTitle}>Card Selling & Wallet — Fintech Transaction Engine</Text>
+          <Text style={styles.projectDesc}>
+            Secure agent-based card selling and wallet: onboarding, top-ups, IPN-based bank reconciliation,
+            purchase flows, agent settlement. Idempotent IPN handler, commission engine, instant cashback,
+            statement generation (debit/credit).
           </Text>
+          <View style={styles.projectTags}>
+            <Text style={styles.projectTag}>Transaction Engine</Text>
+            <Text style={styles.projectTag}>Commission</Text>
+            <Text style={styles.projectTag}>Cashback</Text>
+            <Text style={styles.projectTag}>IPN</Text>
+            <Text style={styles.projectTag}>Spring Boot</Text>
+          </View>
         </View>
 
-        {/* Footer */}
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>fahim.foysal.emon@gmail.com</Text>
-          <Text style={styles.footerText}>+880 1683 149665</Text>
-          <Link src={WEBSITE_URL} style={[styles.footerText, { color: colors.accent }]}>
-            fahimfoysalemon.github.io
-          </Link>
-          <Link src="https://linkedin.com/in/emowzz" style={[styles.footerText, { color: colors.accent }]}>
-            linkedin.com/in/emowzz
-          </Link>
-          <Link src="https://github.com/FahimFoysalEmon" style={[styles.footerText, { color: colors.accent }]}>
-            github.com/FahimFoysalEmon
+        <View style={styles.projectCard}>
+          <Text style={styles.projectTitle}>EKYB (Electronic Know Your Business)</Text>
+          <Text style={styles.projectDesc}>
+            Business documentation & KYC with OAuth2 + Keycloak, document validation, audit trails for regulators.
+          </Text>
+          <View style={styles.projectTags}>
+            <Text style={styles.projectTag}>Security</Text>
+            <Text style={styles.projectTag}>Compliance</Text>
+            <Text style={styles.projectTag}>OAuth2</Text>
+            <Text style={styles.projectTag}>KYC</Text>
+          </View>
+        </View>
+
+        <View style={styles.projectCard}>
+          <Text style={styles.projectTitle}>Hotel & Flight Booking — TourVisio & Payment Gateway</Text>
+          <Text style={styles.projectDesc}>
+            3rd‑party TourVisio API for hotel/flight booking in banking app; payment gateway and IPN reconciliation.
+          </Text>
+          <View style={styles.projectTags}>
+            <Text style={styles.projectTag}>3rd‑Party API</Text>
+            <Text style={styles.projectTag}>Payment Gateway</Text>
+            <Text style={styles.projectTag}>IPN</Text>
+          </View>
+        </View>
+
+        <View style={styles.projectCard}>
+          <Text style={styles.projectTitle}>Crypto Trading Integration (OKX)</Text>
+          <Text style={styles.projectDesc}>
+            3rd‑party exchange integration, ledger updates, microservices, settlement & audit logging.
+          </Text>
+          <View style={styles.projectTags}>
+            <Text style={styles.projectTag}>3rd‑Party API</Text>
+            <Text style={styles.projectTag}>Crypto</Text>
+            <Text style={styles.projectTag}>Microservices</Text>
+          </View>
+        </View>
+
+        <View style={styles.projectCard}>
+          <Text style={styles.projectTitle}>Global Payable Platform</Text>
+          <Text style={styles.projectDesc}>
+            Cross-border payments, FX, KYC between Canada and Bangladesh; 3rd‑party remittance providers.
+          </Text>
+          <View style={styles.projectTags}>
+            <Text style={styles.projectTag}>Cross-border</Text>
+            <Text style={styles.projectTag}>Payments</Text>
+            <Text style={styles.projectTag}>KYC</Text>
+          </View>
+        </View>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Technical Writing</Text>
+        <View style={styles.writingItem}>
+          <Text style={styles.writingTitle}>Understanding OAuth 2.0</Text>
+          <Link src="https://medium.com/@fahim.foysal.emon/simplest-way-to-understand-oauth-2-0-be4e797ab9a" style={styles.writingLink}>
+            medium.com/@fahim.foysal.emon
           </Link>
         </View>
+        <View style={styles.writingItem}>
+          <Text style={styles.writingTitle}>Builder Pattern in Java</Text>
+          <Link src="https://medium.com/@fahim.foysal.emon/builder-pattern-in-java-b15a5352f63c" style={styles.writingLink}>
+            medium.com/@fahim.foysal.emon
+          </Link>
+        </View>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Extracurricular</Text>
+        <Text style={styles.summary}>
+          Organised multiple tours inside the company with my team in both India and Bangladesh — helping the squad
+          unwind, bond, and explore together.
+        </Text>
+      </View>
+
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>fahim.foysal.emon@gmail.com</Text>
+        <Text style={styles.footerText}>+880 1683 149665</Text>
+        <Link src={WEBSITE_URL} style={[styles.footerText, { color: colors.accentLight }]}>
+          fahimfoysalemon.github.io
+        </Link>
+        <Link src="https://linkedin.com/in/emowzz" style={[styles.footerText, { color: colors.accentLight }]}>
+          linkedin.com/in/emowzz
+        </Link>
+        <Link src="https://github.com/FahimFoysalEmon" style={[styles.footerText, { color: colors.accentLight }]}>
+          github.com/FahimFoysalEmon
+        </Link>
       </View>
     </Page>
   </Document>
