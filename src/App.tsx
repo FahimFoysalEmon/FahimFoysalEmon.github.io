@@ -24,13 +24,36 @@ export default function App(): JSX.Element {
     message: "",
   });
 
+  const [isDownloading, setIsDownloading] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Keep mailto as fallback for quick contact. Consider replacing with a serverless function later.
     const mailtoLink = `mailto:fahim.foysal.emon@gmail.com?subject=Message from ${emailForm.name || "Website Visitor"
       }&body=${encodeURIComponent(emailForm.message)}%0A%0AFrom: ${emailForm.email || "noreply"
       }`;
     window.location.href = mailtoLink;
+  };
+
+  const handleDownloadResume = async () => {
+    if (isDownloading) return;
+    setIsDownloading(true);
+    try {
+      const [{ pdf }, { default: ResumeDocument }] = await Promise.all([
+        import("@react-pdf/renderer"),
+        import("./ResumePDF"),
+      ]);
+      const blob = await pdf(<ResumeDocument />).toBlob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Fahim_Foysal_Emon_Resume.pdf";
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error("Failed to generate PDF:", err);
+    } finally {
+      setIsDownloading(false);
+    }
   };
 
   const featuredProjects = [
@@ -126,14 +149,14 @@ export default function App(): JSX.Element {
                   >
                     I&apos;m open to Fintech opportunities
                   </a>
-                  <a
-                    href="/resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-2 bg-blue-600 rounded-md text-white text-sm hover:bg-blue-700"
+                  <button
+                    type="button"
+                    onClick={handleDownloadResume}
+                    disabled={isDownloading}
+                    className="px-3 py-2 bg-blue-600 rounded-md text-white text-sm hover:bg-blue-700 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Download Resume
-                  </a>
+                    {isDownloading ? "Generating..." : "Download Resume"}
+                  </button>
 
                   <a
                     href="https://github.com/FahimFoysalEmon"
