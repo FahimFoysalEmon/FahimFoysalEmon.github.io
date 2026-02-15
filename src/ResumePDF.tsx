@@ -371,6 +371,22 @@ const ResumeDocument: React.FC = () => (
         <Text style={styles.sectionTitle}>Featured Projects</Text>
 
         <View style={styles.projectCard}>
+          <Text style={styles.projectTitle}>FastPay PayBill — Iraq Electricity Bill Payments</Text>
+          <Text style={styles.projectDesc}>
+            Maintained bill-payment service enabling electricity payments in Iraq via FastPay; delivered refunds,
+            feature upgrades, IPN handling, scheduler orchestration, and safe concurrent API calls. Used ShedLock
+            for scheduler coordination.
+          </Text>
+          <View style={styles.projectTags}>
+            <Text style={styles.projectTag}>Bill Pay</Text>
+            <Text style={styles.projectTag}>FastPay</Text>
+            <Text style={styles.projectTag}>IPN</Text>
+            <Text style={styles.projectTag}>ShedLock</Text>
+            <Text style={styles.projectTag}>Concurrency</Text>
+          </View>
+        </View>
+
+        <View style={styles.projectCard}>
           <Text style={styles.projectTitle}>Card Selling & Wallet — Fintech Transaction Engine</Text>
           <Text style={styles.projectDesc}>
             Secure agent-based card selling and wallet: onboarding, top-ups, IPN-based bank reconciliation,

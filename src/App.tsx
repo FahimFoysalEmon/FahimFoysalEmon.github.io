@@ -58,6 +58,17 @@ export default function App(): JSX.Element {
 
   const featuredProjects = [
     {
+      title: "FastPay PayBill — Iraq Electricity Bill Payments",
+      description:
+        "Maintained bill-payment service enabling electricity payments in Iraq via FastPay; delivered refunds, feature upgrades, IPN handling, scheduler orchestration, and safe concurrent API calls.",
+      highlights: [
+        "Refund flow and payment lifecycle enhancements for new features",
+        "Idempotent IPN processing with reconciliation and auditability",
+        "Scheduler coordination using ShedLock; concurrency-safe API execution",
+      ],
+      tags: ["Bill Pay", "FastPay", "IPN", "ShedLock", "Concurrency"],
+    },
+    {
       title: "Card Selling & Wallet — Fintech Transaction Engine",
       description:
         "Secure agent-based card selling and wallet system: onboarding, top-ups, IPN-based bank reconciliation, purchase flows, and agent settlement.",
