@@ -8,16 +8,16 @@ import {
   Link,
 } from "@react-pdf/renderer";
 
-// Match website theme: #071021 bg, blue accent, gray text
+// White resume template (PDF) - independent from website theme
 const colors = {
-  bg: "#071021",
-  surface: "#0f172a",
-  card: "#1e293b",
-  border: "#334155",
-  text: "#f1f5f9",
-  textMuted: "#94a3b8",
+  bg: "#ffffff",
+  surface: "#f8fafc",
+  card: "#f3f4f6",
+  border: "#e5e7eb",
+  text: "#111827",
+  textMuted: "#6b7280",
   accent: "#2563eb",
-  accentLight: "#60a5fa",
+  accentLight: "#1d4ed8",
   emerald: "#059669",
 };
 
