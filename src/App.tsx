@@ -58,7 +58,7 @@ export default function App(): JSX.Element {
 
   const featuredProjects = [
     {
-      title: "FastPay PayBill — Iraq Electricity Bill Payments",
+      title: "FastPay PayBill - Iraq Electricity Bill Payments",
       description:
         "Maintained bill-payment service enabling electricity payments in Iraq via FastPay; delivered refunds, feature upgrades, IPN handling, scheduler orchestration, and safe concurrent API calls.",
       highlights: [
@@ -69,7 +69,7 @@ export default function App(): JSX.Element {
       tags: ["Bill Pay", "FastPay", "IPN", "ShedLock", "Concurrency"],
     },
     {
-      title: "Card Selling & Wallet — Fintech Transaction Engine",
+      title: "Card Selling & Wallet - Fintech Transaction Engine",
       description:
         "Secure agent-based card selling and wallet system: onboarding, top-ups, IPN-based bank reconciliation, purchase flows, and agent settlement.",
       highlights: [
@@ -87,14 +87,14 @@ export default function App(): JSX.Element {
       tags: ["Security", "Compliance", "OAuth2", "KYC"],
     },
     {
-      title: "Hotel & Flight Booking — TourVisio & Payment Gateway",
+      title: "Hotel & Flight Booking - TourVisio & Payment Gateway",
       description:
-        "3rd‑party API integration with TourVisio for hotel/flight booking inside a banking app; payment gateway and IPN-based reconciliation.",
+        "3rd-party API integration with TourVisio for hotel/flight booking inside a banking app; payment gateway and IPN-based reconciliation.",
       highlights: [
         "TourVisio API integration (retries, error handling, idempotency)",
         "Payment gateway flow and IPN reconciliation for reliable settlement",
       ],
-      tags: ["3rd‑Party API", "Payment Gateway", "IPN", "Banking App"],
+      tags: ["3rd-Party API", "Payment Gateway", "IPN", "Banking App"],
     },
   ];
 
@@ -102,23 +102,23 @@ export default function App(): JSX.Element {
     {
       title: "Crypto Trading Integration (OKX)",
       description:
-        "3rd‑party exchange integration for buy/sell flows; ledger updates and eventual consistency across microservices.",
+        "3rd-party exchange integration for buy/sell flows; ledger updates and eventual consistency across microservices.",
       highlights: ["OKX API integration", "Microservices", "Resilient order processing", "Settlement & audit logging"],
-      tags: ["3rd‑Party API", "Crypto", "Microservices", "Settlement"],
+      tags: ["3rd-Party API", "Crypto", "Microservices", "Settlement"],
     },
     {
       title: "E-commerce Integrations (Amazon, eBay, iHub)",
       description:
-        "Order orchestration via 3rd‑party APIs; tracking, reconciliation, and auth for multi-channel orders.",
+        "Order orchestration via 3rd-party APIs; tracking, reconciliation, and auth for multi-channel orders.",
       highlights: ["Multi-provider API integration", "Order tracking", "Reconciliation"],
-      tags: ["3rd‑Party API", "E-commerce", "Reconciliation"],
+      tags: ["3rd-Party API", "E-commerce", "Reconciliation"],
     },
     {
       title: "Global Payable Platform",
       description:
-        "Cross-border payment flows, FX handling, and KYC between Canada and Bangladesh; 3rd‑party remittance providers.",
+        "Cross-border payment flows, FX handling, and KYC between Canada and Bangladesh; 3rd-party remittance providers.",
       highlights: ["Cross-border payments", "KYC integration", "FX & settlement"],
-      tags: ["Cross-border", "Payments", "KYC", "3rd‑Party API"],
+      tags: ["Cross-border", "Payments", "KYC", "3rd-Party API"],
     },
   ];
 
@@ -140,7 +140,7 @@ export default function App(): JSX.Element {
                 <h1 className="text-3xl font-bold mb-1">Fahim Foysal Emon</h1>
                 {/* <hr color="light"></hr> */}
                 <p className="text-gray-300 flex items-center gap-2 flex-wrap">
-                  Backend Software Engineer — Fintech & Payments
+                  Backend Software Engineer - Fintech & Payments
                   <span className="px-2 py-1 text-xs bg-emerald-700/80 text-emerald-100 rounded font-medium">Open to remote roles</span>
                 </p>
 
@@ -148,7 +148,7 @@ export default function App(): JSX.Element {
                   I design and build secure, compliant financial systems: transaction
                   engines, banking add money, purchase flows, commission & instant cashback,
                   statement generation, and debit/credit ledgers. Deep experience with
-                  mobile wallet & banking backends, IPN reconciliation, and 3rd‑party
+                  mobile wallet & banking backends, IPN reconciliation, and 3rd-party
                   API integration. 4.5+ years in production fintech. I mentor and supervise
                   junior developers in my team. Open to remote senior backend roles.
                 </p>
@@ -256,14 +256,14 @@ export default function App(): JSX.Element {
             </div>
 
             <div className="p-4 rounded-lg bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800">
-              <h3 className="text-lg font-semibold">Statements, Ledgers & 3rd‑Party APIs</h3>
+              <h3 className="text-lg font-semibold">Statements, Ledgers & 3rd-Party APIs</h3>
               <p className="text-gray-400 mt-2 text-sm">
                 Debit/credit ledgers, statement generation, and reliable integrations
                 with banks and payment providers.
               </p>
               <ul className="mt-3 text-sm text-gray-300 list-disc ml-5 space-y-1">
                 <li>Statement generation (debit/credit, balance history)</li>
-                <li>3rd‑party API integration: banking, gateways, booking services</li>
+                <li>3rd-party API integration: banking, gateways, booking services</li>
                 <li>Idempotent callbacks, retries, and reconciliation</li>
               </ul>
             </div>
@@ -312,7 +312,7 @@ export default function App(): JSX.Element {
               </p>
               <p className="flex items-center gap-2">
                 <Code2 size={16} className="text-blue-500" />
-                <span>3rd‑party API integration (banking, gateways, exchanges)</span>
+                <span>3rd-party API integration (banking, gateways, exchanges)</span>
               </p>
             </div>
           </div>
@@ -478,6 +478,16 @@ export default function App(): JSX.Element {
           </div>
         </section>
 
+        {/* Education */}
+        <section>
+          <h2 className="text-xl font-semibold mb-4 text-gray-100">Education</h2>
+          <div className="rounded-lg border border-gray-800 bg-gray-900 p-4">
+            <h3 className="font-semibold text-gray-100">Bachelor of Science in Computer Science and Engineering</h3>
+            <p className="text-gray-300 mt-1">United International University, Dhaka, Bangladesh</p>
+            <p className="text-sm text-gray-400 mt-2">Graduated: January 2021</p>
+          </div>
+        </section>
+
         {/* Extracurricular */}
         <section>
           <h2 className="text-xl font-semibold mb-4 text-gray-100">Extracurricular</h2>
@@ -485,7 +495,7 @@ export default function App(): JSX.Element {
             <p className="text-sm leading-6">
               Along with my team, I’ve organised and run multiple tours inside the company in both{' '}
               <span className="text-gray-200">India</span> and{' '}
-              <span className="text-gray-200">Bangladesh</span> — helping the squad unwind, bond, and explore together.
+              <span className="text-gray-200">Bangladesh</span> - helping the squad unwind, bond, and explore together.
             </p>
           </div>
         </section>
@@ -561,7 +571,7 @@ export default function App(): JSX.Element {
 
           <div className="lg:col-span-8 col-span-12">
             <h2 className="text-xl font-semibold mb-2 text-gray-100">Get in Touch</h2>
-            <p className="text-gray-400 text-sm mb-4">Hiring for Fintech, payments, or backend? I&apos;m open to remote roles — reach out below or via LinkedIn.</p>
+            <p className="text-gray-400 text-sm mb-4">Hiring for Fintech, payments, or backend? I&apos;m open to remote roles - reach out below or via LinkedIn.</p>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">Name</label>
