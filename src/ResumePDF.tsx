@@ -291,7 +291,7 @@ const ResumeDocument: React.FC = () => (
           </Link>
         </View>
         <Text style={styles.coreStack}>
-          Core Stack: Java, Spring Boot, Microservices, Postgres, MongoDB, Keycloak, AWS CloudWatch
+          Core Stack: Java, Spring Boot, REST APIs, Microservices, SQL (PostgreSQL/MySQL), MongoDB, Keycloak/JWT, AWS (S3, IAM, CloudWatch, EC2 basics)
         </Text>
       </View>
 
@@ -300,7 +300,7 @@ const ResumeDocument: React.FC = () => (
         <Text style={styles.summary}>
           Backend Engineer with nearly 5 years of experience building secure, scalable fintech systems with strong
           data consistency. Hands-on in transaction engines, add money flows, purchase/refund lifecycle, debit-credit
-          ledgers, statement generation, IPN/webhook processing, and third-party API integration. Proven ownership of
+          ledgers, statement generation, IPN/webhook processing, payment gateway integration, AWS S3 object storage, and third-party API integration. Proven ownership of
           production-critical features, concurrency control, and mentoring junior developers.
         </Text>
       </View>
@@ -314,9 +314,10 @@ const ResumeDocument: React.FC = () => (
         <Link src="https://www.newroztech.com/" style={styles.expCompany}>
           Newroz Technologies Ltd.
         </Link>
-        <Text style={styles.bullet}>• Built and maintained transaction-heavy financial systems with high reliability.</Text>
-        <Text style={styles.bullet}>• Owned purchase engine, refund flow, add money/IPN logic, and debit-credit statement accuracy.</Text>
+        <Text style={styles.bullet}>• Built and preserved transaction-heavy financial systems with high reliability.</Text>
+        <Text style={styles.bullet}>• Owned purchase engine, refund flow, add money/IPN logic, and debit-credit statement accuracy in production.</Text>
         <Text style={styles.bullet}>• Prevented race conditions and duplicate transaction issues with transactional safeguards.</Text>
+        <Text style={styles.bullet}>• Integrated AWS S3 with IAM: prefix-based object layout, public URLs, presigned private access for fintech files.</Text>
         <Text style={styles.bullet}>• Mentored and supervised junior engineers while delivering production features.</Text>
       </View>
 
@@ -344,7 +345,7 @@ const ResumeDocument: React.FC = () => (
           <View style={styles.highlightCard}>
             <Text style={styles.highlightTitle}>External Integrations</Text>
             <Text style={styles.highlightText}>
-              Deep third-party API work with banking, telecom, gateway, booking, and exchange platforms.
+              Third-party APIs (banking, telecom, gateways, booking) plus AWS S3 object storage with IAM and presigned URLs.
             </Text>
           </View>
         </View>
@@ -355,15 +356,15 @@ const ResumeDocument: React.FC = () => (
         <View style={styles.skillsRow}>
           <View style={styles.skillsCol}>
             <Text style={styles.skillItem}>• Backend: Java, Spring Boot, REST APIs</Text>
-            <Text style={styles.skillItem}>• Domain: Payments, Transaction Processing, Reconciliation</Text>
-            <Text style={styles.skillItem}>• Security: OAuth2, Keycloak, JWT, Spring Security</Text>
-            <Text style={styles.skillItem}>• Data: Postgres, MongoDB, MySQL</Text>
+            <Text style={styles.skillItem}>• Domain: Payments, Transaction Processing, Reconciliation, Payment Gateway</Text>
+            <Text style={styles.skillItem}>• Security: OAuth2, Keycloak, JWT, Spring Security, Role-Based Access Control</Text>
+            <Text style={styles.skillItem}>• Data: PostgreSQL, MongoDB, MySQL, SQL Query Optimization</Text>
           </View>
           <View style={styles.skillsCol}>
             <Text style={styles.skillItem}>• Architecture: Microservices, Monolith</Text>
-            <Text style={styles.skillItem}>• Tools: GitHub, Postman, Swagger, Jira</Text>
-            <Text style={styles.skillItem}>• Monitoring: CloudWatch, LogHub</Text>
-            <Text style={styles.skillItem}>• Collaboration: Requirement Analysis, Code Review, Mentoring</Text>
+            <Text style={styles.skillItem}>• Tools: GitHub, Postman, Swagger, Jira, Docker, Jenkins</Text>
+            <Text style={styles.skillItem}>• Cloud: AWS S3, IAM, EC2 (basics), CloudWatch, LogHub</Text>
+            <Text style={styles.skillItem}>• Delivery: CI/CD Collaboration, Requirement Analysis, Code Review, Mentoring</Text>
           </View>
         </View>
       </View>
@@ -392,14 +393,17 @@ const ResumeDocument: React.FC = () => (
           </Text>
           <Text style={styles.bullet}>• Implemented commission and instant cashback logic based on configurable ranges.</Text>
           <Text style={styles.bullet}>• Built add money integration through FIB with webhook/IPN reconciliation.</Text>
-          <Text style={styles.bullet}>• Maintained accuracy under heavy daily transaction loads.</Text>
+          <Text style={styles.bullet}>• Upheld accuracy under heavy daily transaction loads.</Text>
           <Text style={styles.bullet}>• Supports thousands of card purchase transactions daily in production.</Text>
+          <Text style={styles.bullet}>• Stored documents and assets in AWS S3 with IAM-scoped access and public vs private fetch patterns.</Text>
           <View style={styles.projectTags}>
             <Text style={styles.projectTag}>Java</Text>
             <Text style={styles.projectTag}>Spring Boot</Text>
             <Text style={styles.projectTag}>Postgres</Text>
             <Text style={styles.projectTag}>MongoDB</Text>
             <Text style={styles.projectTag}>Keycloak</Text>
+            <Text style={styles.projectTag}>AWS S3</Text>
+            <Text style={styles.projectTag}>IAM</Text>
           </View>
         </View>
 
@@ -410,7 +414,7 @@ const ResumeDocument: React.FC = () => (
             wallet distribution, purchase/refund, statements, and reporting.
           </Text>
           <Text style={styles.bullet}>• Delivered debit-credit ledger consistency and monthly reporting reliability.</Text>
-          <Text style={styles.bullet}>• Maintained transactional safety and performance for production usage.</Text>
+          <Text style={styles.bullet}>• Sustained transactional safety and performance for production usage.</Text>
           <View style={styles.projectTags}>
             <Text style={styles.projectTag}>Java</Text>
             <Text style={styles.projectTag}>Spring Boot</Text>
@@ -426,7 +430,7 @@ const ResumeDocument: React.FC = () => (
             Electricity bill payment feature inside FastPay mobile wallet for both agent and personal users.
             Supports full payment (current outstanding) and partial payment (legacy debt).
           </Text>
-          <Text style={styles.bullet}>• Maintained production service and handled refund and edge-case scenarios.</Text>
+          <Text style={styles.bullet}>• Preserved production service quality while handling refund and edge-case scenarios.</Text>
           <Text style={styles.bullet}>• Improved reliability of bill processing in microservice architecture.</Text>
           <Text style={styles.bullet}>• Powers both agent and personal bill payment use cases in the FastPay wallet.</Text>
           <View style={styles.projectTags}>
@@ -458,6 +462,8 @@ const ResumeDocument: React.FC = () => (
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Tools</Text>
         <View style={styles.toolsRow}>
+          <Text style={styles.toolTag}>S3</Text>
+          <Text style={styles.toolTag}>IAM</Text>
           <Text style={styles.toolTag}>CloudWatch</Text>
           <Text style={styles.toolTag}>LogHub</Text>
           <Text style={styles.toolTag}>GitHub</Text>

@@ -76,8 +76,9 @@ export default function App(): JSX.Element {
         "Idempotent IPN handler for bank callbacks; transactional rollback & audit trails",
         "Commission engine and instant cashback; role-based settlement",
         "Statement generation (debit/credit, balance history) for agents and end-users",
+        "AWS S3 + IAM: directory-style object keys, public URLs and presigned private file access",
       ],
-      tags: ["Transaction Engine", "Commission", "Cashback", "IPN", "Spring Boot"],
+      tags: ["Transaction Engine", "Commission", "Cashback", "IPN", "Spring Boot", "AWS S3"],
     },
     {
       title: "EKYB (Electronic Know Your Business)",
@@ -267,6 +268,19 @@ export default function App(): JSX.Element {
                 <li>Idempotent callbacks, retries, and reconciliation</li>
               </ul>
             </div>
+
+            <div className="p-4 rounded-lg bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800 md:col-span-2">
+              <h3 className="text-lg font-semibold">Cloud Storage (AWS S3)</h3>
+              <p className="text-gray-400 mt-2 text-sm">
+                Implemented AWS for fintech file handling: directory-style object keys in S3 buckets, public delivery
+                where appropriate, and private access via IAM-scoped credentials and presigned URLs.
+              </p>
+              <ul className="mt-3 text-sm text-gray-300 list-disc ml-5 space-y-1">
+                <li>S3 object storage with prefix-based organization (folder-like paths)</li>
+                <li>IAM for least-privilege access from backend services</li>
+                <li>Public vs private object patterns aligned with compliance needs</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -313,6 +327,10 @@ export default function App(): JSX.Element {
               <p className="flex items-center gap-2">
                 <Code2 size={16} className="text-blue-500" />
                 <span>3rd-party API integration (banking, gateways, exchanges)</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Code2 size={16} className="text-blue-500" />
+                <span>AWS: S3 (public/private), IAM, EC2 basics, CloudWatch</span>
               </p>
             </div>
           </div>
