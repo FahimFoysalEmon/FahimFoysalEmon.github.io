@@ -298,7 +298,7 @@ const ResumeDocument: React.FC = () => (
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Professional Summary</Text>
         <Text style={styles.summary}>
-          Backend Engineer with nearly 5 years of experience building secure, scalable fintech systems with strong
+          Backend Engineer with 5 years of experience building secure, scalable fintech systems with strong
           data consistency. Hands-on in transaction engines, add money flows, purchase/refund lifecycle, debit-credit
           ledgers, statement generation, IPN/webhook processing, payment gateway integration, AWS S3 object storage, and third-party API integration. Proven ownership of
           production-critical features, concurrency control, and mentoring junior developers.

@@ -150,7 +150,7 @@ export default function App(): JSX.Element {
                   engines, banking add money, purchase flows, commission & instant cashback,
                   statement generation, and debit/credit ledgers. Deep experience with
                   mobile wallet & banking backends, IPN reconciliation, and 3rd-party
-                  API integration. 4.5+ years in production fintech. I mentor and supervise
+                  API integration. 5 years in production fintech. I mentor and supervise
                   junior developers in my team. Open to remote senior backend roles.
                 </p>
 
@@ -287,50 +287,50 @@ export default function App(): JSX.Element {
         {/* Technical Skills */}
         <section>
           <h2 className="text-xl font-semibold mb-4 text-gray-100">Technical Skills</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:items-start gap-4">
             <div className="space-y-2">
-              <p className="flex items-center gap-2">
-                <Code2 size={16} className="text-blue-500" />
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
                 <span>Java & Spring Boot (Fintech systems)</span>
               </p>
-              <p className="flex items-center gap-2">
-                <Code2 size={16} className="text-blue-500" />
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
                 <span>Payments / IPN</span>
               </p>
-              <p className="flex items-center gap-2">
-                <Code2 size={16} className="text-blue-500" />
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
                 <span>Transaction Engine</span>
               </p>
-              <p className="flex items-center gap-2">
-                <Code2 size={16} className="text-blue-500" />
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
                 <span>Security: OAuth2, Keycloak, JWT</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
+                <span>AWS: S3 (public/private), IAM, EC2 basics, CloudWatch</span>
               </p>
             </div>
 
             <div className="space-y-2">
-              <p className="flex items-center gap-2">
-                <Code2 size={16} className="text-blue-500" />
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
                 <span>Microservice / Monolith Architecture</span>
               </p>
-              <p className="flex items-center gap-2">
-                <Code2 size={16} className="text-blue-500" />
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
                 <span>Datastores: Postgres, Mongo</span>
               </p>
-              <p className="flex items-center gap-2">
-                <Code2 size={16} className="text-blue-500" />
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
                 <span>CI/CD, Docker basics</span>
               </p>
-              <p className="flex items-center gap-2">
-                <Code2 size={16} className="text-blue-500" />
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
                 <span>React (basic frontend)</span>
               </p>
-              <p className="flex items-center gap-2">
-                <Code2 size={16} className="text-blue-500" />
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
                 <span>3rd-party API integration (banking, gateways, exchanges)</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <Code2 size={16} className="text-blue-500" />
-                <span>AWS: S3 (public/private), IAM, EC2 basics, CloudWatch</span>
               </p>
             </div>
           </div>
