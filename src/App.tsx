@@ -307,14 +307,18 @@ export default function App(): JSX.Element {
               </p>
               <p className="flex items-start gap-2">
                 <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
-                <span>AWS: S3 (public/private), IAM, EC2 basics, CloudWatch</span>
+                <span>Microservice / Monolith Architecture</span>
               </p>
             </div>
 
             <div className="space-y-2">
               <p className="flex items-start gap-2">
                 <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
-                <span>Microservice / Monolith Architecture</span>
+                <span>AWS: S3 (public/private), IAM, EC2 basics, CloudWatch</span>
+              </p>
+              <p className="flex items-start gap-2">
+                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
+                <span>Apache Kafka : Producer, Consumer, Topic, GroupID, @KafkaEventListener</span>
               </p>
               <p className="flex items-start gap-2">
                 <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
@@ -322,11 +326,7 @@ export default function App(): JSX.Element {
               </p>
               <p className="flex items-start gap-2">
                 <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
-                <span>CI/CD, Docker basics</span>
-              </p>
-              <p className="flex items-start gap-2">
-                <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
-                <span>React (basic frontend)</span>
+                <span>CI/CD, Docker basics · React (basic frontend)</span>
               </p>
               <p className="flex items-start gap-2">
                 <Code2 size={16} className="text-blue-500 shrink-0 mt-0.5" />
@@ -462,6 +462,19 @@ export default function App(): JSX.Element {
         <section>
           <h2 className="text-xl font-semibold mb-4 text-gray-100">Technical Writing</h2>
           <div className="space-y-4">
+            <a
+              href="https://medium.com/p/095b1707a9fd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block border border-gray-800 p-4 rounded-lg hover:border-blue-500/50 transition-colors bg-gray-900"
+            >
+              <h3 className="font-semibold mb-2">
+                Apache Kafka: Producer, Consumer, Topic, GroupID, @KafkaEventListener
+              </h3>
+              <p className="text-gray-400">
+                Hands-on guide to Kafka fundamentals with Spring Kafka — producers, consumers, topics, consumer groups, and event listeners.
+              </p>
+            </a>
             <a
               href="https://medium.com/@fahim.foysal.emon/simplest-way-to-understand-oauth-2-0-be4e797ab9a"
               target="_blank"

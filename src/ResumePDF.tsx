@@ -362,6 +362,7 @@ const ResumeDocument: React.FC = () => (
           </View>
           <View style={styles.skillsCol}>
             <Text style={styles.skillItem}>• Architecture: Microservices, Monolith</Text>
+            <Text style={styles.skillItem}>• Apache Kafka : Producer, Consumer, Topic, GroupID, @KafkaEventListener</Text>
             <Text style={styles.skillItem}>• Tools: GitHub, Postman, Swagger, Jira, Docker, Jenkins</Text>
             <Text style={styles.skillItem}>• Cloud: AWS S3, IAM, EC2 (basics), CloudWatch, LogHub</Text>
             <Text style={styles.skillItem}>• Delivery: CI/CD Collaboration, Requirement Analysis, Code Review, Mentoring</Text>
@@ -489,6 +490,12 @@ const ResumeDocument: React.FC = () => (
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Technical Writing</Text>
+        <View style={styles.writingItem}>
+          <Text style={styles.writingTitle}>Apache Kafka: Producer, Consumer, Topic, GroupID, @KafkaEventListener</Text>
+          <Link src="https://medium.com/p/095b1707a9fd" style={styles.writingLink}>
+            medium.com/p/095b1707a9fd
+          </Link>
+        </View>
         <View style={styles.writingItem}>
           <Text style={styles.writingTitle}>Understanding OAuth 2.0</Text>
           <Link src="https://medium.com/@fahim.foysal.emon/simplest-way-to-understand-oauth-2-0-be4e797ab9a" style={styles.writingLink}>
