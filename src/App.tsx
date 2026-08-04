@@ -141,7 +141,7 @@ export default function App(): JSX.Element {
                 <h1 className="text-3xl font-bold mb-1">Fahim Foysal Emon</h1>
                 {/* <hr color="light"></hr> */}
                 <p className="text-gray-300 flex items-center gap-2 flex-wrap">
-                  Backend Software Engineer - Fintech & Payments
+                  Senior Backend Software Engineer - Fintech & Payments
                   <span className="px-2 py-1 text-xs bg-emerald-700/80 text-emerald-100 rounded font-medium">Open to remote roles</span>
                 </p>
 
