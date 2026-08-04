@@ -208,7 +208,7 @@ export default function App(): JSX.Element {
                 <p className="text-sm text-gray-400">Currently at</p>
                 <a href="https://www.palmpay.com/bangladesh/" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-400 hover:underline">PalmPay Limited.</a>
                 <p className="mt-2 text-sm text-gray-400">Location</p>
-                <p className="font-medium">Gulshan, Lotus Kalam Tower, Dhaka, Bangladesh</p>
+                <p className="font-medium">Lotus Kamal Tower, Gulshan, Dhaka, Bangladesh</p>
                 <p className="mt-2 text-sm text-gray-400">Email</p>
                 <p className="text-blue-400">fahim.foysal.emon@gmail.com</p>
               </div>
