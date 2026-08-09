@@ -27,16 +27,16 @@ const styles = StyleSheet.create({
     fontFamily: "Helvetica",
     fontSize: 10,
     paddingHorizontal: 32,
-    paddingTop: 32,
+    paddingTop: 28,
     paddingBottom: 24,
   },
   topBand: {
     height: 4,
     backgroundColor: colors.accent,
-    marginBottom: 16,
+    marginBottom: 14,
   },
   header: {
-    marginBottom: 14,
+    marginBottom: 12,
   },
   name: {
     fontSize: 24,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     color: colors.border,
   },
   section: {
-    marginBottom: 9,
+    marginBottom: 12,
   },
   sectionTitle: {
     fontSize: 11,
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   summary: {
     fontSize: 9.2,
     color: colors.textMuted,
-    lineHeight: 1.35,
+    lineHeight: 1.4,
   },
   expHeader: {
     flexDirection: "row",
@@ -118,41 +118,19 @@ const styles = StyleSheet.create({
     color: colors.accentLight,
     marginBottom: 6,
   },
+  expBlock: {
+    marginBottom: 12,
+  },
   expDesc: {
     fontSize: 9,
     color: colors.textMuted,
-    lineHeight: 1.3,
+    lineHeight: 1.35,
   },
   coreStack: {
     fontSize: 8.8,
     color: colors.textMuted,
-    marginTop: 6,
-    lineHeight: 1.3,
-  },
-  highlightRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 8,
-  },
-  highlightCard: {
-    width: "48%",
-    backgroundColor: colors.card,
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderLeftWidth: 3,
-    borderLeftColor: colors.accent,
-    padding: 10,
-  },
-  highlightTitle: {
-    fontSize: 10,
-    fontWeight: "bold",
-    color: colors.text,
-    marginBottom: 4,
-  },
-  highlightText: {
-    fontSize: 8,
-    color: colors.textMuted,
-    lineHeight: 1.45,
+    marginTop: 8,
+    lineHeight: 1.35,
   },
   skillsRow: {
     flexDirection: "row",
@@ -162,102 +140,76 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   skillItem: {
-    fontSize: 8.6,
+    fontSize: 8.8,
     color: colors.textMuted,
-    marginBottom: 3,
-  },
-  toolsRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 4,
-  },
-  toolTag: {
-    fontSize: 8,
-    backgroundColor: colors.card,
-    color: colors.textMuted,
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 3,
-    borderWidth: 1,
-    borderColor: colors.border,
+    marginBottom: 4,
+    lineHeight: 1.35,
   },
   projectCard: {
-    marginBottom: 8,
-    paddingBottom: 6,
+    marginBottom: 12,
+    paddingBottom: 10,
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
   },
   projectTitle: {
-    fontSize: 9,
+    fontSize: 9.5,
     fontWeight: "bold",
     color: colors.text,
-    marginBottom: 3,
+    marginBottom: 4,
   },
   projectDesc: {
-    fontSize: 8.6,
+    fontSize: 8.8,
     color: colors.textMuted,
-    lineHeight: 1.28,
-    marginBottom: 4,
+    lineHeight: 1.35,
+    marginBottom: 5,
   },
   projectTags: {
     flexDirection: "row",
     flexWrap: "wrap",
     gap: 4,
+    marginTop: 4,
   },
   projectTag: {
-    fontSize: 6.5,
+    fontSize: 7,
     backgroundColor: colors.card,
     color: colors.textMuted,
-    paddingHorizontal: 5,
-    paddingVertical: 2,
+    paddingHorizontal: 6,
+    paddingVertical: 3,
     borderRadius: 2,
     borderWidth: 1,
     borderColor: colors.border,
   },
   writingItem: {
-    marginBottom: 6,
+    marginBottom: 8,
   },
   writingTitle: {
-    fontSize: 8.6,
-    fontWeight: "bold",
-    color: colors.text,
-  },
-  writingLink: {
-    fontSize: 8,
-    color: colors.accentLight,
-    textDecoration: "none",
-  },
-  footer: {
-    marginTop: 12,
-    paddingTop: 8,
-    borderTopWidth: 1,
-    borderTopColor: colors.border,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    gap: 6,
-  },
-  footerText: {
-    fontSize: 7,
-    color: colors.textMuted,
-  },
-  bullet: {
-    fontSize: 8.6,
-    color: colors.textMuted,
-    marginBottom: 2,
-    lineHeight: 1.3,
-  },
-  projectHeading: {
     fontSize: 9,
     fontWeight: "bold",
     color: colors.text,
     marginBottom: 2,
   },
-  small: {
-    fontSize: 8.6,
+  writingLink: {
+    fontSize: 8.5,
+    color: colors.accentLight,
+    textDecoration: "none",
+  },
+  bullet: {
+    fontSize: 8.8,
     color: colors.textMuted,
     marginBottom: 3,
-    lineHeight: 1.3,
+    lineHeight: 1.4,
+  },
+  projectHeading: {
+    fontSize: 9.5,
+    fontWeight: "bold",
+    color: colors.text,
+    marginBottom: 3,
+  },
+  small: {
+    fontSize: 8.8,
+    color: colors.textMuted,
+    marginBottom: 8,
+    lineHeight: 1.35,
   },
 });
 
@@ -269,7 +221,7 @@ const ResumeDocument: React.FC = () => (
       <View style={styles.topBand} />
       <View style={styles.header}>
         <Text style={styles.name}>Fahim Foysal Emon</Text>
-        <Text style={styles.title}>Backend Software Engineer (Java, Spring Boot)</Text>
+        <Text style={styles.title}>Senior Backend Software Engineer (Java, Spring Boot)</Text>
         <View style={styles.badge}>
           <Text style={styles.badgeText}>Open to remote roles</Text>
         </View>
@@ -300,54 +252,39 @@ const ResumeDocument: React.FC = () => (
         <Text style={styles.summary}>
           Backend Engineer with 5 years of experience building secure, scalable fintech systems with strong
           data consistency. Hands-on in transaction engines, add money flows, purchase/refund lifecycle, debit-credit
-          ledgers, statement generation, IPN/webhook processing, payment gateway integration, AWS S3 object storage, and third-party API integration. Proven ownership of
+          ledgers, IPN/webhook processing, payment gateways, AWS S3, and third-party API integration. Proven ownership of
           production-critical features, concurrency control, and mentoring junior developers.
         </Text>
       </View>
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Professional Experience</Text>
-        <View style={styles.expHeader}>
-          <Text style={styles.expTitle}>Backend Software Engineer</Text>
-          <Text style={styles.expDate}>Jul 2021 - Present</Text>
-        </View>
-        <Link src="https://www.newroztech.com/" style={styles.expCompany}>
-          Newroz Technologies Ltd.
-        </Link>
-        <Text style={styles.bullet}>• Built and preserved transaction-heavy financial systems with high reliability.</Text>
-        <Text style={styles.bullet}>• Owned purchase engine, refund flow, add money/IPN logic, and debit-credit statement accuracy in production.</Text>
-        <Text style={styles.bullet}>• Prevented race conditions and duplicate transaction issues with transactional safeguards.</Text>
-        <Text style={styles.bullet}>• Integrated AWS S3 with IAM: prefix-based object layout, public URLs, presigned private access for fintech files.</Text>
-        <Text style={styles.bullet}>• Mentored and supervised junior engineers while delivering production features.</Text>
-      </View>
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Fintech Highlights</Text>
-        <View style={styles.highlightRow}>
-          <View style={styles.highlightCard}>
-            <Text style={styles.highlightTitle}>Transaction Ownership</Text>
-            <Text style={styles.highlightText}>
-              End-to-end ownership of transaction engine, purchase/refund lifecycle, and add money flows.
-            </Text>
+        <View style={styles.expBlock}>
+          <View style={styles.expHeader}>
+            <Text style={styles.expTitle}>Senior Backend Software Engineer</Text>
+            <Text style={styles.expDate}>Aug 2026 - Present</Text>
           </View>
-          <View style={styles.highlightCard}>
-            <Text style={styles.highlightTitle}>Data Consistency</Text>
-            <Text style={styles.highlightText}>
-              Strong duplicate prevention, concurrency-safe handling, and reliable debit-credit ledger accuracy.
-            </Text>
+          <Link src="https://www.palmpay.com/bangladesh/" style={styles.expCompany}>
+            PalmPay Limited.
+          </Link>
+          <Text style={styles.bullet}>• Building secure, scalable backend systems for mobile wallet and payment products.</Text>
+          <Text style={styles.bullet}>• Working on fintech transaction flows with a focus on reliability and data consistency.</Text>
+        </View>
+
+        <View>
+          <View style={styles.expHeader}>
+            <Text style={styles.expTitle}>Backend Software Engineer</Text>
+            <Text style={styles.expDate}>Jul 2021 - Jul 2026</Text>
           </View>
-          <View style={styles.highlightCard}>
-            <Text style={styles.highlightTitle}>Reconciliation</Text>
-            <Text style={styles.highlightText}>
-              IPN/webhook processing with reconciliation and auditability for production payment workflows.
-            </Text>
-          </View>
-          <View style={styles.highlightCard}>
-            <Text style={styles.highlightTitle}>External Integrations</Text>
-            <Text style={styles.highlightText}>
-              Third-party APIs (banking, telecom, gateways, booking) plus AWS S3 object storage with IAM and presigned URLs.
-            </Text>
-          </View>
+          <Link src="https://www.newroztech.com/" style={styles.expCompany}>
+            Newroz Technologies Ltd.
+          </Link>
+          <Text style={styles.bullet}>• Built and preserved transaction-heavy financial systems with high reliability.</Text>
+          <Text style={styles.bullet}>• Owned purchase engine, refund flow, add money/IPN logic, and debit-credit statement accuracy in production.</Text>
+          <Text style={styles.bullet}>• Prevented race conditions and duplicate transaction issues with transactional safeguards.</Text>
+          <Text style={styles.bullet}>• Integrated AWS S3 with IAM: prefix-based object layout, public URLs, presigned private access for fintech files.</Text>
+          <Text style={styles.bullet}>• Mentored and supervised junior engineers while delivering production features.</Text>
         </View>
       </View>
 
@@ -357,15 +294,14 @@ const ResumeDocument: React.FC = () => (
           <View style={styles.skillsCol}>
             <Text style={styles.skillItem}>• Backend: Java, Spring Boot, REST APIs</Text>
             <Text style={styles.skillItem}>• Domain: Payments, Transaction Processing, Reconciliation, Payment Gateway</Text>
-            <Text style={styles.skillItem}>• Security: OAuth2, Keycloak, JWT, Spring Security, Role-Based Access Control</Text>
+            <Text style={styles.skillItem}>• Security: OAuth2, Keycloak, JWT, Spring Security, RBAC</Text>
             <Text style={styles.skillItem}>• Data: PostgreSQL, MongoDB, MySQL, SQL Query Optimization</Text>
           </View>
           <View style={styles.skillsCol}>
             <Text style={styles.skillItem}>• Architecture: Microservices, Monolith</Text>
-            <Text style={styles.skillItem}>• Apache Kafka : Producer, Consumer, Topic, GroupID, @KafkaEventListener</Text>
+            <Text style={styles.skillItem}>• Messaging: Apache Kafka (Producer, Consumer, Topics)</Text>
             <Text style={styles.skillItem}>• Tools: GitHub, Postman, Swagger, Jira, Docker, Jenkins</Text>
             <Text style={styles.skillItem}>• Cloud: AWS S3, IAM, EC2 (basics), CloudWatch, LogHub</Text>
-            <Text style={styles.skillItem}>• Delivery: CI/CD Collaboration, Requirement Analysis, Code Review, Mentoring</Text>
           </View>
         </View>
       </View>
@@ -377,7 +313,6 @@ const ResumeDocument: React.FC = () => (
           United International University, Dhaka, Bangladesh | Graduated: January 2021
         </Text>
       </View>
-
     </Page>
 
     <Page size="A4" style={styles.page}>
@@ -387,16 +322,14 @@ const ResumeDocument: React.FC = () => (
         <Text style={styles.sectionTitle}>Selected Production Projects</Text>
 
         <View style={styles.projectCard}>
-          <Text style={styles.projectTitle}>Card-Selling (Iraq) | Nov 2024 - Present</Text>
+          <Text style={styles.projectTitle}>Card-Selling (Iraq) | Nov 2024 - Jul 2026</Text>
           <Text style={styles.projectDesc}>
-            Agent-based digital card platform with distributor/sub-distributor/SR hierarchy, virtual wallet distribution,
+            Agent-based digital card platform with distributor hierarchy, virtual wallet distribution,
             purchase engine, refund flow, and debit-credit statement generation.
           </Text>
           <Text style={styles.bullet}>• Implemented commission and instant cashback logic based on configurable ranges.</Text>
-          <Text style={styles.bullet}>• Built add money integration through FIB with webhook/IPN reconciliation.</Text>
-          <Text style={styles.bullet}>• Upheld accuracy under heavy daily transaction loads.</Text>
-          <Text style={styles.bullet}>• Supports thousands of card purchase transactions daily in production.</Text>
-          <Text style={styles.bullet}>• Stored documents and assets in AWS S3 with IAM-scoped access and public vs private fetch patterns.</Text>
+          <Text style={styles.bullet}>• Built add money via FIB with webhook/IPN reconciliation; thousands of daily purchases in production.</Text>
+          <Text style={styles.bullet}>• Stored documents in AWS S3 with IAM-scoped access and public vs private fetch patterns.</Text>
           <View style={styles.projectTags}>
             <Text style={styles.projectTag}>Java</Text>
             <Text style={styles.projectTag}>Spring Boot</Text>
@@ -409,10 +342,9 @@ const ResumeDocument: React.FC = () => (
         </View>
 
         <View style={styles.projectCard}>
-          <Text style={styles.projectTitle}>TEAMMART (Retail Card Platform) | Nov 2025 - Present</Text>
+          <Text style={styles.projectTitle}>TEAMMART (Retail Card Platform) | Nov 2025 - Jul 2026</Text>
           <Text style={styles.projectDesc}>
-            Retail digital card selling platform modeled after Card-Selling with simplified finance logic focused on
-            wallet distribution, purchase/refund, statements, and reporting.
+            Retail digital card selling platform with wallet distribution, purchase/refund, statements, and reporting.
           </Text>
           <Text style={styles.bullet}>• Delivered debit-credit ledger consistency and monthly reporting reliability.</Text>
           <Text style={styles.bullet}>• Sustained transactional safety and performance for production usage.</Text>
@@ -426,13 +358,11 @@ const ResumeDocument: React.FC = () => (
         </View>
 
         <View style={styles.projectCard}>
-          <Text style={styles.projectTitle}>FastPay PayBill (Iraq Electricity) | Nov 2025 - Present</Text>
+          <Text style={styles.projectTitle}>FastPay PayBill (Iraq Electricity) | Nov 2025 - Jul 2026</Text>
           <Text style={styles.projectDesc}>
-            Electricity bill payment feature inside FastPay mobile wallet for both agent and personal users.
-            Supports full payment (current outstanding) and partial payment (legacy debt).
+            Electricity bill payment in FastPay wallet for agent and personal users — full and partial payments.
           </Text>
-          <Text style={styles.bullet}>• Preserved production service quality while handling refund and edge-case scenarios.</Text>
-          <Text style={styles.bullet}>• Improved reliability of bill processing in microservice architecture.</Text>
+          <Text style={styles.bullet}>• Handled refunds and edge cases; improved reliability of bill processing in microservices.</Text>
           <Text style={styles.bullet}>• Powers both agent and personal bill payment use cases in the FastPay wallet.</Text>
           <View style={styles.projectTags}>
             <Text style={styles.projectTag}>Java</Text>
@@ -457,22 +387,6 @@ const ResumeDocument: React.FC = () => (
             <Text style={styles.projectTag}>Microservices</Text>
             <Text style={styles.projectTag}>TourVisio API</Text>
           </View>
-        </View>
-      </View>
-
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Tools</Text>
-        <View style={styles.toolsRow}>
-          <Text style={styles.toolTag}>S3</Text>
-          <Text style={styles.toolTag}>IAM</Text>
-          <Text style={styles.toolTag}>CloudWatch</Text>
-          <Text style={styles.toolTag}>LogHub</Text>
-          <Text style={styles.toolTag}>GitHub</Text>
-          <Text style={styles.toolTag}>Postman</Text>
-          <Text style={styles.toolTag}>Swagger</Text>
-          <Text style={styles.toolTag}>Jira</Text>
-          <Text style={styles.toolTag}>Jenkins</Text>
-          <Text style={styles.toolTag}>Docker</Text>
         </View>
       </View>
 
@@ -503,7 +417,6 @@ const ResumeDocument: React.FC = () => (
           </Link>
         </View>
       </View>
-
     </Page>
   </Document>
 );
