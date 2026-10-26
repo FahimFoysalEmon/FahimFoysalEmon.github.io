@@ -269,7 +269,9 @@ const ResumeDocument: React.FC = () => (
             PalmPay Limited.
           </Link>
           <Text style={styles.bullet}>• Building secure, scalable backend systems for mobile wallet and payment products.</Text>
-          <Text style={styles.bullet}>• Working on fintech transaction flows with a focus on reliability and data consistency.</Text>
+          <Text style={styles.bullet}>• Worked on Veevo SMS Gateway (Pakistan) for SMS-based payment and notification flows.</Text>
+          <Text style={styles.bullet}>• Built ASIP insurance (Philippines) on mobile — optional purchase or skip during the user flow.</Text>
+          <Text style={styles.bullet}>• Focused on reliable fintech transaction flows, data consistency, and production ownership.</Text>
         </View>
 
         <View>

@@ -134,15 +134,15 @@ export default function App(): JSX.Element {
             className="w-[170px] h-[220px] rounded-lg object-cover object-top border-2 border-blue-600"
           />
 
-
           <div className="flex-1">
             <div className="flex items-center justify-between gap-4">
               <div>
                 <h1 className="text-3xl font-bold mb-1">Fahim Foysal Emon</h1>
-                {/* <hr color="light"></hr> */}
                 <p className="text-gray-300 flex items-center gap-2 flex-wrap">
                   Senior Backend Software Engineer - Fintech & Payments
-                  <span className="px-2 py-1 text-xs bg-emerald-700/80 text-emerald-100 rounded font-medium">Open to remote roles</span>
+                  <span className="px-2 py-1 text-xs bg-emerald-700/80 text-emerald-100 rounded font-medium">
+                    Open to remote roles
+                  </span>
                 </p>
 
                 <p className="mt-2 text-sm text-gray-400 leading-6 max-w-xl">
@@ -169,7 +169,6 @@ export default function App(): JSX.Element {
                   >
                     {isDownloading ? "Generating..." : "Download Resume"}
                   </button>
-
                   <a
                     href="https://github.com/FahimFoysalEmon"
                     target="_blank"
@@ -179,9 +178,6 @@ export default function App(): JSX.Element {
                     <Github size={16} />
                     <span className="hidden sm:inline">GitHub</span>
                   </a>
-
-                  {/* <span className="h-6 w-px bg-gray-700 mx-3" aria-hidden /> */}
-
                   <a
                     href="https://www.linkedin.com/in/emowzz/"
                     target="_blank"
@@ -206,7 +202,14 @@ export default function App(): JSX.Element {
 
               <div className="hidden md:block text-right">
                 <p className="text-sm text-gray-400">Currently at</p>
-                <a href="https://www.palmpay.com/bangladesh/" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-400 hover:underline">PalmPay Limited.</a>
+                <a
+                  href="https://www.palmpay.com/bangladesh/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-400 hover:underline"
+                >
+                  PalmPay Limited.
+                </a>
                 <p className="mt-2 text-sm text-gray-400">Location</p>
                 <p className="font-medium">Lotus Kamal Tower, Gulshan, Dhaka, Bangladesh</p>
                 <p className="mt-2 text-sm text-gray-400">Email</p>
@@ -215,6 +218,80 @@ export default function App(): JSX.Element {
             </div>
           </div>
         </header>
+
+        {/* Experience */}
+        <section>
+          <h2 className="text-xl font-semibold mb-4 text-gray-100">Experience</h2>
+          <div className="relative space-y-0">
+            <div className="absolute left-[7px] top-3 bottom-3 w-px bg-gray-800" aria-hidden />
+
+            <article className="relative pl-8 pb-8">
+              <span className="absolute left-0 top-1.5 h-4 w-4 rounded-full border-2 border-emerald-500 bg-[#071021]" aria-hidden />
+              <div className="rounded-lg border border-gray-800 bg-gray-900/60 p-4">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h3 className="font-semibold text-gray-100">Senior Backend Software Engineer</h3>
+                      <span className="px-2 py-0.5 text-[11px] rounded bg-emerald-700/80 text-emerald-100 font-medium">
+                        Current
+                      </span>
+                    </div>
+                    <a
+                      href="https://www.palmpay.com/bangladesh/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:underline text-sm"
+                    >
+                      PalmPay Limited.
+                    </a>
+                  </div>
+                  <p className="text-sm text-gray-400 shrink-0">Aug 2026 – Present</p>
+                </div>
+                <ul className="mt-3 text-sm text-gray-300 list-disc ml-5 space-y-1.5 leading-6">
+                  <li>Building secure, scalable backend systems for mobile wallet and payment products.</li>
+                  <li>
+                    Worked on <span className="text-gray-200">Veevo SMS Gateway (Pakistan)</span> — SMS-based
+                    communication flows for payment and notification use cases.
+                  </li>
+                  <li>
+                    Built <span className="text-gray-200">ASIP insurance (Philippines)</span> for mobile —
+                    users can optionally purchase insurance or skip it during the flow.
+                  </li>
+                  <li>Focused on reliable fintech transaction flows, data consistency, and production ownership.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article className="relative pl-8">
+              <span className="absolute left-0 top-1.5 h-4 w-4 rounded-full border-2 border-blue-500 bg-[#071021]" aria-hidden />
+              <div className="rounded-lg border border-gray-800 bg-gray-900/60 p-4">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                  <div>
+                    <h3 className="font-semibold text-gray-100">Backend Software Engineer</h3>
+                    <a
+                      href="https://www.newroztech.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:underline text-sm"
+                    >
+                      Newroz Technologies Ltd.
+                    </a>
+                  </div>
+                  <p className="text-sm text-gray-400 shrink-0">Jul 2021 – Jul 2026</p>
+                </div>
+                <ul className="mt-3 text-sm text-gray-300 list-disc ml-5 space-y-1.5 leading-6">
+                  <li>Built and preserved transaction-heavy financial systems with high reliability.</li>
+                  <li>Owned purchase engine, refund flow, add money/IPN logic, and debit-credit statement accuracy in production.</li>
+                  <li>Prevented race conditions and duplicate transaction issues with transactional safeguards.</li>
+                  <li>Implemented commission and instant cashback logic for agent-based card-selling platforms.</li>
+                  <li>Integrated AWS S3 with IAM: prefix-based object layout, public URLs, and presigned private access for fintech files.</li>
+                  <li>Delivered production features across Card-Selling (Iraq), TEAMMART, FastPay PayBill, and FIB hotel booking integrations.</li>
+                  <li>Mentored and supervised junior engineers while delivering production-critical features.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
 
         {/* Fintech Highlights */}
         <section>
