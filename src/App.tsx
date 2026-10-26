@@ -253,10 +253,7 @@ export default function App(): JSX.Element {
                     Worked on <span className="text-gray-200">Veevo SMS Gateway (Pakistan)</span> — SMS-based
                     communication flows for payment and notification use cases.
                   </li>
-                  <li>
-                    Built <span className="text-gray-200">ASIP insurance (Philippines)</span> for mobile —
-                    users can optionally purchase insurance or skip it during the flow.
-                  </li>
+                  <li>Designed and integrated an embedded <span className="text-gray-200">ASIP insurance</span> module into a prominent Philippine Buy Now, Pay Later (BNPL) mobile application, successfully driving incremental revenue through an optimized, optional opt-in/opt-out checkout flow.</li>
                   <li>Focused on reliable fintech transaction flows, data consistency, and production ownership.</li>
                 </ul>
               </div>
