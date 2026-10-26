@@ -413,8 +413,24 @@ const ResumeDocument: React.FC = () => (
           </Link>
         </View>
         <View style={styles.writingItem}>
-          <Text style={styles.writingTitle}>Understanding OAuth 2.0</Text>
-          <Link src="https://medium.com/@fahim.foysal.emon/simplest-way-to-understand-oauth-2-0-be4e797ab9a" style={styles.writingLink}>
+          <Text style={styles.writingTitle}>
+            Zero-Downtime DB Migration Under Thousands of Requests/min
+          </Text>
+          <Link
+            src="https://medium.com/@fahim.foysal.emon/how-do-you-migrate-a-database-with-thousands-of-requests-per-minute-without-taking-your-system-down-9f7e5d2d0daf"
+            style={styles.writingLink}
+          >
+            medium.com/@fahim.foysal.emon
+          </Link>
+        </View>
+        <View style={styles.writingItem}>
+          <Text style={styles.writingTitle}>
+            Why FetchType.LAZY Alone Cannot Save You from N+1 in Spring Boot
+          </Text>
+          <Link
+            src="https://medium.com/@fahim.foysal.emon/why-fetchtype-lazy-alone-cannot-save-you-from-the-n-1-problem-in-spring-boot-e39c6cbe7ab2"
+            style={styles.writingLink}
+          >
             medium.com/@fahim.foysal.emon
           </Link>
         </View>

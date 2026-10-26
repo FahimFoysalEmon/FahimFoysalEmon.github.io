@@ -17,6 +17,7 @@ import {
 
 export default function App(): JSX.Element {
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [showAllWriting, setShowAllWriting] = useState(false);
 
   const [emailForm, setEmailForm] = useState({
     name: "",
@@ -534,52 +535,91 @@ export default function App(): JSX.Element {
 
         {/* Blog Posts */}
         <section>
-          <h2 className="text-xl font-semibold mb-4 text-gray-100">Technical Writing</h2>
+          <div className="flex items-center gap-2 mb-4">
+            <h2 className="text-xl font-semibold text-gray-100">Technical Writing</h2>
+            <span className="px-2 py-0.5 text-[11px] rounded bg-emerald-700/80 text-emerald-100 font-medium">
+              Medium
+            </span>
+          </div>
           <div className="space-y-4">
-            <a
-              href="https://medium.com/p/095b1707a9fd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block border border-gray-800 p-4 rounded-lg hover:border-blue-500/50 transition-colors bg-gray-900"
-            >
-              <h3 className="font-semibold mb-2">
-                Apache Kafka: Producer, Consumer, Topic, GroupID, @KafkaEventListener
-              </h3>
-              <p className="text-gray-400">
-                Hands-on guide to Kafka fundamentals with Spring Kafka — producers, consumers, topics, consumer groups, and event listeners.
-              </p>
-            </a>
-            <a
-              href="https://medium.com/@fahim.foysal.emon/simplest-way-to-understand-oauth-2-0-be4e797ab9a"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block border border-gray-800 p-4 rounded-lg hover:border-blue-500/50 transition-colors bg-gray-900"
-            >
-              <h3 className="font-semibold mb-2">Understanding OAuth 2.0</h3>
-              <p className="text-gray-400">A comprehensive guide to understanding OAuth 2.0 authentication flow.</p>
-            </a>
-            <a
-              href="https://medium.com/@fahim.foysal.emon/builder-pattern-in-java-b15a5352f63c"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block border border-gray-800 p-4 rounded-lg hover:border-blue-500/50 transition-colors bg-gray-900"
-            >
-              <h3 className="font-semibold mb-2">Builder Pattern in Java</h3>
-              <p className="text-gray-400">Deep dive into the Builder design pattern and its implementation.</p>
-            </a>
+            {[
+              {
+                href: "https://medium.com/p/095b1707a9fd",
+                title: "Apache Kafka: Producer, Consumer, Topic, GroupID, @KafkaEventListener",
+                description:
+                  "Hands-on guide to Kafka fundamentals with Spring Kafka — producers, consumers, topics, consumer groups, and event listeners.",
+              },
+              {
+                href: "https://medium.com/@fahim.foysal.emon/how-do-you-migrate-a-database-with-thousands-of-requests-per-minute-without-taking-your-system-down-9f7e5d2d0daf",
+                title:
+                  "How Do You Migrate a Database with Thousands of Requests per Minute Without Taking Your System Down?",
+                description:
+                  "Practical approach to zero-downtime database migration under high traffic — keeping production live while moving data safely.",
+              },
+              {
+                href: "https://medium.com/@fahim.foysal.emon/why-fetchtype-lazy-alone-cannot-save-you-from-the-n-1-problem-in-spring-boot-e39c6cbe7ab2",
+                title: "Why FetchType.LAZY Alone Cannot Save You from the N+1 Problem in Spring Boot",
+                description:
+                  "Why lazy loading is not enough to avoid N+1 queries, and what actually helps in Spring Boot / JPA.",
+              },
+            ].map((post) => (
+              <a
+                key={post.href}
+                href={post.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block border border-gray-800 p-4 rounded-lg hover:border-blue-500/50 transition-colors bg-gray-900"
+              >
+                <h3 className="font-semibold mb-2">{post.title}</h3>
+                <p className="text-gray-400">{post.description}</p>
+              </a>
+            ))}
 
-            <a
-              href="https://medium.com/@fahim.foysal.emon/abstract-factory-design-pattern-12db0532c6a5"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block border border-gray-800 p-4 rounded-lg hover:border-blue-500/50 transition-colors bg-gray-900"
+            {showAllWriting &&
+              [
+                {
+                  href: "https://medium.com/@fahim.foysal.emon/simplest-way-to-understand-oauth-2-0-be4e797ab9a",
+                  title: "Understanding OAuth 2.0",
+                  description: "A comprehensive guide to understanding OAuth 2.0 authentication flow.",
+                },
+                {
+                  href: "https://medium.com/@fahim.foysal.emon/builder-pattern-in-java-b15a5352f63c",
+                  title: "Builder Pattern in Java",
+                  description: "Deep dive into the Builder design pattern and its implementation.",
+                },
+                {
+                  href: "https://medium.com/@fahim.foysal.emon/abstract-factory-design-pattern-12db0532c6a5",
+                  title: "Abstract Factory Design Pattern",
+                  description: "Simple understanding of Abstract Design Pattern",
+                },
+              ].map((post) => (
+                <a
+                  key={post.href}
+                  href={post.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block border border-gray-800 p-4 rounded-lg hover:border-blue-500/50 transition-colors bg-gray-900"
+                >
+                  <h3 className="font-semibold mb-2">{post.title}</h3>
+                  <p className="text-gray-400">{post.description}</p>
+                </a>
+              ))}
+
+            <button
+              type="button"
+              onClick={() => setShowAllWriting(!showAllWriting)}
+              className="w-full py-2 px-4 border border-gray-800 rounded-lg hover:border-blue-500/50 transition-colors flex items-center justify-center gap-2"
             >
-              <h3 className="font-semibold mb-2">Abstract Factory Design Pattern</h3>
-              <p className="text-gray-400">Simple understanding of Abstract Design Pattern</p>
-            </a>
-
-
-
+              {showAllWriting ? (
+                <>
+                  Show Less <ChevronUp size={16} />
+                </>
+              ) : (
+                <>
+                  See More Writing <ChevronDown size={16} />
+                </>
+              )}
+            </button>
           </div>
         </section>
 
