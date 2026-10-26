@@ -596,12 +596,26 @@ export default function App(): JSX.Element {
         {/* Extracurricular */}
         <section>
           <h2 className="text-xl font-semibold mb-4 text-gray-100">Extracurricular</h2>
-          <div className="rounded-lg border border-gray-800 bg-gray-900/50 p-4 text-gray-300">
-            <p className="text-sm leading-6">
-              Along with my team, I’ve organised and run multiple tours inside the company in both{' '}
-              <span className="text-gray-200">India</span> and{' '}
-              <span className="text-gray-200">Bangladesh</span> - helping the squad unwind, bond, and explore together.
-            </p>
+          <div className="rounded-lg border border-gray-800 bg-gray-900/60 p-4">
+            <h3 className="font-semibold text-gray-100">
+              Led the Tour for Company (Newroz Technologies Ltd.)
+            </h3>
+            <ul className="mt-3 text-sm text-gray-300 list-disc ml-5 space-y-1.5 leading-6">
+              <li>
+                Organized a cross-border company tour to{" "}
+                <span className="text-gray-200">India</span>, handling end-to-end planning:
+                hotels, food, travel, and a full itinerary from start to finish.
+              </li>
+              <li>
+                Maintained continuous coordination with hotels, travel partners, the{" "}
+                <span className="text-gray-200">accounts department</span>, and the team
+                to keep budget, bookings, and schedule aligned.
+              </li>
+              <li>
+                Organized several company tours within{" "}
+                <span className="text-gray-200">Bangladesh</span> for team bonding and offsites.
+              </li>
+            </ul>
           </div>
         </section>
 
