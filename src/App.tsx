@@ -131,7 +131,7 @@ export default function App(): JSX.Element {
           <img
             src="/photos/mypicture.jpg"
             alt="Fahim Foysal"
-            className="w-[170px] h-[220px] rounded-lg object-cover object-top border-2 border-blue-600"
+            className="w-[200px] h-[300px] rounded-lg object-cover object-top border-2 border-blue-500"
           />
 
           <div className="flex-1">
